@@ -451,8 +451,17 @@
         </a>
         
         
-        <a  class="全部文章 工具 浏览器插件 "
-           href="/blog/2023/10/11/hello-world3/"
+        <a  class="全部文章 笔记 折腾笔记 "
+           href="/blog/2023/10/11/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF-LightPictrue%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E5%9B%BE%E5%BA%8A/"
+           data-tag="宝塔面板,图床,LightPictrue"
+           data-author="" >
+            <span class="post-title" title="宝塔面板+LightPictrue搭建私有图床">宝塔面板+LightPictrue搭建私有图床</span>
+            <span class="post-date" title="2023-10-11 13:20:21">2023/10/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 API合集 "
+           href="/blog/2023/10/11/hello-world4/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Hello World">Hello World</span>
@@ -469,20 +478,11 @@
         </a>
         
         
-        <a  class="全部文章 工具 API合集 "
-           href="/blog/2023/10/11/hello-world4/"
+        <a  class="全部文章 工具 浏览器插件 "
+           href="/blog/2023/10/11/hello-world3/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2023-10-11 13:20:21">2023/10/11</span>
-        </a>
-        
-        
-        <a  class="全部文章 笔记 折腾笔记 "
-           href="/blog/2023/10/11/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF-LightPictrue%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E5%9B%BE%E5%BA%8A/"
-           data-tag="宝塔面板,图床,LightPictrue"
-           data-author="" >
-            <span class="post-title" title="宝塔面板+LightPictrue搭建私有图床">宝塔面板+LightPictrue搭建私有图床</span>
             <span class="post-date" title="2023-10-11 13:20:21">2023/10/11</span>
         </a>
         
@@ -548,7 +548,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-10-11 13:38:31'>2023-10-10 22:12</time>
+            发布时间 : <time class="date" title='最后更新: 2023-10-12 15:51:57'>2023-10-10 22:12</time>
         
     </div>
     <div class="article-meta">
@@ -622,7 +622,7 @@ npm install
 <p>至此，你本地的博客就已经搭建成功，接下来就是部署到 Github Page 了。</p>
 <h3 id="注册-Github"><a href="#注册-Github" class="headerlink" title="注册 Github"></a>注册 Github</h3><hr>
 <p>首先如果你还没有 Github 账号的先<a target="_blank" rel="noopener" href="https://github.com/">注册</a>一个，详情参考<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/86fae346e723303c49121abb.html">百度注册教程</a>。<br>注册好GitHub后就 new repository 创建一个新的公共仓库，命名随意。</p>
-<img src="http://pic.zooxango.eu.org/LightPicture/2023/10/6415604c8d182335.png" style="zoom:80%;" />
+<img src="https://s2.loli.net/2023/10/12/vA63QNLkrda7E14.png" style="zoom:80%;" />
 
 <h3 id="配置-SSH-key"><a href="#配置-SSH-key" class="headerlink" title="配置 SSH key"></a>配置 SSH key</h3><hr>
 <p>要使用 git 工具首先要配置一下SSH key，为部署本地博客到 Github 做准备。</p>
@@ -637,16 +637,16 @@ git config --global user.email &quot;注册邮箱地址&quot;
 <p>然后开始生成密钥 SSH key</p>
 <pre><code>ssh-keygen -t rsa -C &#39;注册邮箱地址&#39;
 </code></pre>
-<p>按照提示完成三次回车，即可生成 ssh key。通过查看 ~&#x2F;.ssh&#x2F;id_rsa.pub 文件内容，获取到你的 SSH key ，<strong>注意：此处命令要在git bash下执行，cmd命令行下是不行的</strong><br><img src="http://pic.zooxango.eu.org/LightPicture/2023/10/d7a0588ced7114fb.png#pic_center"></p>
+<p>按照提示完成三次回车，即可生成 ssh key。通过查看 ~&#x2F;.ssh&#x2F;id_rsa.pub 文件内容，获取到你的 SSH key ，<strong>注意：此处命令要在git bash下执行，cmd命令行下是不行的</strong><br><img src="https://s2.loli.net/2023/10/12/SIuLkDFhBK8JAPm.png"></p>
 <p>首次使用还需要确认并添加主机到本机SSH可信列表。若返回 Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access. 内容，则证明添加成功。</p>
 <pre><code>ssh -T git@github.com
 </code></pre>
-<p><img src="http://pic.zooxango.eu.org/LightPicture/2023/10/854e0e7f7d684d29.png"></p>
-<p>到这还没完，还要登录 Github 上添加刚刚生成的SSH key，按以下步骤添加：<br><img src="http://pic.zooxango.eu.org/LightPicture/2023/10/3d06e2b6cbe0be43.png"><br>创建一个新的 SSH key, 标题随便，key 就填刚才生成那个，确认创建，搞定！！这样在你的 SSH keys 列表里就会看到你刚刚添加的密钥。<br><img src="http://pic.zooxango.eu.org/LightPicture/2023/10/b42376b4c516f239.png" style="zoom:80%;" /></p>
+<p><img src="https://s2.loli.net/2023/10/12/fjbF5H3lVnrATuM.png"></p>
+<p>到这还没完，还要登录 Github 上添加刚刚生成的SSH key，按以下步骤添加：<br><img src="https://s2.loli.net/2023/10/12/XFpDbkOglfcwuBH.png"><br>创建一个新的 SSH key, 标题随便，key 就填刚才生成那个，确认创建，搞定！！这样在你的 SSH keys 列表里就会看到你刚刚添加的密钥。<br><img src="https://s2.loli.net/2023/10/12/3IN58qzv4sjHTeM.png" style="zoom:80%;" /></p>
 <h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><p>此时，本地和Github的工作做得差不了，是时候把它们两个连接起来了。你也可以查看官网的部署教程。<br>先不着急，部署之前还需要修改配置和安装部署插件。  </p>
 <p>第一：打开项目根目录下的_config.yml 配置文件配置参数。拉到文件末尾，填上如下配置：<br><img src="http://pic.zooxango.eu.org/LightPicture/2023/10/ad70d6997e4b5501.png"></p>
 <p>type就填git ,repo填写信息在下图位置</p>
-<img src="http://pic.zooxango.eu.org/LightPicture/2023/10/1727673477f58f14.png" style="zoom:70%;" />
+<img src="https://s2.loli.net/2023/10/12/OJWXzpqNdexZRC1.png" style="zoom:70%;" />
 
 
 
@@ -669,31 +669,6 @@ git config --global user.email &quot;注册邮箱地址&quot;
 </p>
 
 
-
-
-    <div id="comments">
-    <!-- 来必力City版安装代码 -->
-    <div id="lv-container" data-id="city" data-uid="MTAyMC81OTA4NS8zNTU0Nw==">
-        <script type="text/javascript">
-			(function(d, s) {
-				var j, e = d.getElementsByTagName(s)[0];
-
-				if (typeof LivereTower === 'function') { return; }
-
-				j = d.createElement(s);
-				window.livereOptions = {
-					eagerLoading: true,
-					scrollEventTargetSelector: '#post'
-                }
-				j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-				j.async = true;
-				e.parentNode.insertBefore(j, e);
-			})(document, 'script');
-        </script>
-        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-    <!-- City版安装代码已完成 -->
-</div>
 
 
 
