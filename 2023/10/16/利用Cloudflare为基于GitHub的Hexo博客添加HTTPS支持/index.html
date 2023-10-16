@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>局域网文件传输软件-LocalSend | Hexo</title>
-  <meta name="keywords" content=" LocalSend ">
-  <meta name="description" content="局域网文件传输软件-LocalSend | Hexo">
+  <title>利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持 | Hexo</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，死去的记忆该删就删吧！ 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近职业打工，主打一个躺平，宇宙的尽头是编制，有点迷茫了。 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com  其他 alist：链接 图床：链接">
 <meta property="og:type" content="website">
@@ -515,9 +515,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-局域网文件传输软件-LocalSend" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">局域网文件传输软件-LocalSend</h1>
+        <h1 class="article-title">利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持</h1>
     
     <div class="article-meta">
         
@@ -527,29 +527,22 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="工具">工具</a> > 
+            <a  data-rel="笔记">笔记</a> > 
             
-            <a  data-rel="工具&lt;---&gt;应用程序">应用程序</a>
+            <a  data-rel="笔记&lt;---&gt;折腾随笔">折腾随笔</a>
             
         </span>
         
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color5">LocalSend</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-10-14 14:36:19'>2023-10-13 14:32</time>
+            发布时间 : <time class="date" title='最后更新: 2023-10-16 21:42:14'>2023-10-16 21:20</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:341</span>
+        <span>字数:825</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -568,7 +561,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80-download"><span class="toc-text">下载地址:   download</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E5%89%8D%E8%A8%80"><span class="toc-text"> ● 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E6%B3%A8%E5%86%8C-Cloudflare"><span class="toc-text">● 注册 Cloudflare</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9"><span class="toc-text">● 添加站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E4%BF%AE%E6%94%B9DNS"><span class="toc-text">● 修改DNS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E5%BC%80%E5%90%AF-HTTPS"><span class="toc-text">● 开启 HTTPS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E9%87%8D%E5%AE%9A%E5%90%91%E5%BC%BA%E5%88%B6-HTTPS"><span class="toc-text">● 重定向强制 HTTPS</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -584,17 +577,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>LocalSend 是一个开源局域网文件传输软件（开源无广告），它只需要纯局域网环境就能运行（无需公网服务器），全平台支持（Windows、安卓、Linux、MacOS、甚至支持 IOS 都有免费客户端）。</p>
-<p>光听介绍都让人觉得 LocalSend 很优秀：全平台支持、纯局域网环境运行、无广告还开源免费！事实上 LocalSend 使用体验也确实很棒。LocalSend 各平台界面都很统一，主要分为：接收、发送、设置三个页面。</p>
-<p>设置页面可以修改设备名称（还可以进行端口等服务器设置）：</p>
-<p><img src="https://s2.loli.net/2023/10/13/t629bPZeOR81FvU.png"></p>
-<p>发送页面选择想要发送的文件，然后点击对应的设备即可进行发送：</p>
-<p><img src="https://s2.loli.net/2023/10/13/knAawSIHslW2vD8.png"></p>
-<p>对应的设备会在接收页面受到文件、或者消息提示：</p>
-<p><img src="https://s2.loli.net/2023/10/13/gpO2h4bF7U3mcle.png"></p>
-<p>整个软件功能很简单，但是因为它做到了真正的纯局域网、全平台、无广告，所以用起来让人觉得非常舒服。特别的是 LocalSend 支持同时识别多个网关，也支持识别虚拟网关。所以当我用 zerotier 搭建了虚拟局域网， LocalSend 可以通过虚拟局域网将文件传输给远程设备。</p>
-<p>综上所述，在我目前看来LocalSend就是最好的局域网文件传输软件！</p>
-<h3 id="下载地址-download"><a href="#下载地址-download" class="headerlink" title="下载地址:   download"></a>下载地址:   <a target="_blank" rel="noopener" href="https://localsend.org/#/">download</a></h3><p><img src="https://s2.loli.net/2023/10/13/kju2WlX1fzTUIZN.png"></p>
+        <h2 id="●-前言"><a href="#●-前言" class="headerlink" title=" ● 前言"></a> ● 前言</h2><p>GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，就比较复杂了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，从2018年5月1日起，GitHub官方也支持自定义域名开启https了，实现方法可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/99228310">《利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS》</a>，另外一种方法就利用 Cloudflare 的 CDN 中转来启用 HTTPS，这种方法的弊端就是国内访问速度可能会变慢，本文主要讲述这种方法</p>
+<p>Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理</p>
+<h2 id="●-注册-Cloudflare"><a href="#●-注册-Cloudflare" class="headerlink" title="● 注册 Cloudflare"></a>● 注册 Cloudflare</h2><p>到 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/sign-up">Cloudflare官网</a> 注册账号<br><img src="https://s2.loli.net/2023/10/16/FD9C8Mz7NswfmJp.png"></p>
+<h2 id="●-添加站点"><a href="#●-添加站点" class="headerlink" title="● 添加站点"></a>● 添加站点</h2><p>添加你的站点，一直下一步即可  </p>
+<p><img src="https://s2.loli.net/2023/10/16/pYbFwoIcu5lOqKg.png" alt="02.png"></p>
+<p><img src="https://s2.loli.net/2023/10/16/fBMrCPzyvpq2EcH.png" alt="03.png"></p>
+<p>如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo_font_270">《为hexo博客配置个性域名》</a><br><img src="https://s2.loli.net/2023/10/16/AczCoVme9KBb8Iw.png" alt="04.png"></p>
+<h2 id="●-修改DNS"><a href="#●-修改DNS" class="headerlink" title="● 修改DNS"></a>● 修改DNS</h2><p>点击下一步 Cloudflare 会提供给你两个 DNS 地址  </p>
+<p><img src="https://s2.loli.net/2023/10/16/6N475RGi1bVlMsY.png" alt="05.png"></p>
+<p>到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效<br><img src="https://s2.loli.net/2023/10/16/8ZkAIbGSu1JBdiN.png" alt="08.png"></p>
+<p><img src="https://s2.loli.net/2023/10/16/AhHc7e1Ln8ikBqY.png" alt="09.png"></p>
+<p><img src="https://s2.loli.net/2023/10/16/4Kgt8B9AQTNWPzh.png" alt="10.png"></p>
+<h2 id="●-开启-HTTPS"><a href="#●-开启-HTTPS" class="headerlink" title="● 开启 HTTPS"></a>● 开启 HTTPS</h2><p>在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可  </p>
+<p>  <img src="https://s2.loli.net/2023/10/16/893SzIap5gMvF2N.png" alt="07.png"></p>
+<p>关于三种模式 Flexible、Full、Full (Strict) 的区别：</p>
+<ul>
+<li><p>Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的</p>
+</li>
+<li><p>Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书</p>
+</li>
+<li><p>Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的</p>
+</li>
+</ul>
+<p>至此，我们的域名就支持 https 访问了，但是当用户输入 <a target="_blank" rel="noopener" href="http://xxxxxx/">http://xxxxxx</a> 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了</p>
+<h2 id="●-重定向强制-HTTPS"><a href="#●-重定向强制-HTTPS" class="headerlink" title="● 重定向强制 HTTPS"></a>● 重定向强制 HTTPS</h2><p>Cloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可<br><img src="https://s2.loli.net/2023/10/16/hG6x8M1EgFJps3D.png" alt="06.png"></p>
+<p>现在我们的 Hexo 博客就实现了全站 HTTPS！</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
