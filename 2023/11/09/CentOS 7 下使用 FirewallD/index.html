@@ -555,7 +555,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-centos下添加更多串口方法" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CentOS 7 下使用 FirewallD" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">Centos下添加更多串口方法</h1>
     
@@ -582,12 +582,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-09 13:59:55'>2023-11-09 13:25</time>
+            发布时间 : <time class="date" title='最后更新: 2023-11-09 17:25:27'>2023-11-09 14:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:420</span>
+        <span>字数:1.4k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -606,7 +606,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CentOS-7-%E4%B8%8B%E4%BD%BF%E7%94%A8-FirewallD"><span class="toc-text">CentOS 7 下使用 FirewallD</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%8B%E7%BB%8D"><span class="toc-text">一、介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#zone"><span class="toc-text">zone</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E8%A7%84%E5%88%99"><span class="toc-text">过滤规则</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">二、使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9F%A5%E7%9C%8B%E8%A7%84%E5%88%99"><span class="toc-text">1. 查看规则</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%AE%A1%E7%90%86%E8%A7%84%E5%88%99"><span class="toc-text">2. 管理规则</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#a-%E7%AE%A1%E7%90%86%E7%AB%AF%E5%8F%A3"><span class="toc-text">a. 管理端口</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#b-%E7%BD%91%E5%8D%A1%E6%8E%A5%E5%8F%A3"><span class="toc-text">b. 网卡接口</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#c-%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">c. 管理服务</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#d-%E9%85%8D%E7%BD%AE-external-zone-%E4%B8%AD%E7%9A%84-ip-%E5%9C%B0%E5%9D%80%E4%BC%AA%E8%A3%85"><span class="toc-text">d. 配置 external zone 中的 ip 地址伪装</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#e-%E9%85%8D%E7%BD%AE-public-zone-%E7%9A%84%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91"><span class="toc-text">e. 配置 public zone 的端口转发</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#f-%E9%85%8D%E7%BD%AE-public-zone-%E7%9A%84-icmp"><span class="toc-text">f. 配置 public zone 的 icmp</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#g-IP-%E5%B0%81%E7%A6%81"><span class="toc-text">g. IP 封禁</span></a></li></ol></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -622,18 +622,202 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在centos下 默认是只启用4个串口，如果你物理机器上有10个串口，那么你就要进行手动添加6个。</p>
-<p>具体操作方法如下：<br>第一步打开&#x2F;etc&#x2F;default&#x2F;grub文件<br>在文件的GRUB_CMDLINE_LINUX下文件末尾添加8250.nr_uarts&#x3D;10</p>
-<p>第二步重新编译grub</p>
-<p>grub2-mkconfig -o &#x2F;boot&#x2F;grub2&#x2F;grub.cfg 在命令行使用这个命令进行更新</p>
-<p>注意如果是<br>UEFI 系统上则需要执行命令 grub2-mkconfig -o &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;centos&#x2F;grub.cfg</p>
-<p>如何查看是不是UEFI 你可以在启动的时候进入bios里面查看一下是不是设置的Uefi</p>
-<p>这样就可以解决centos下默认只是别4个串口的问题。</p>
-<p>查看串口信息的方法<br>root@localhost ~]# cat &#x2F;proc&#x2F;tty&#x2F;driver&#x2F;serial<br>serinfo:1.0 driver revision:<br>0: uart:16550A port:000003F8 irq:4 tx:0 rx:0<br>1: uart:16550A port:000002F8 irq:3 tx:242 rx:0<br>2: uart:16550A port:000003E8 irq:6 tx:0 rx:0<br>3: uart:16550A port:000002E8 irq:6 tx:0 rx:0<br>4: uart:16550A port:00000240 irq:11 tx:0 rx:0<br>5: uart:16550A port:00000248 irq:11 tx:0 rx:0<br>6: uart:16550A port:00000250 irq:11 tx:0 rx:0<br>7: uart:16550A port:00000258 irq:11 tx:0 rx:0<br>8: uart:16550A port:000002F0 irq:6 tx:0 rx:0<br>9: uart:16550A port:000002E0 irq:6 tx:0 rx:0</p>
-<p>解释备注：如果你发送了信息则tx上回显示字节在增长，如果你接收到信息rx：会显示接受的字节信息。</p>
-<p>设置波特率的方法：<br>stty -F&#x2F;dev&#x2F;ttyS0 speed 9600 cs8 -cstopb -parenb<br>8数据位 1停止位 无校验</p>
-<p>查看当前的串口波特率方法：<br>stty -F &#x2F;dev&#x2F;ttyS0</p>
-<p>注意：两者的波特率要一致，不一致就收不到。</p>
+        <h3 id="CentOS-7-下使用-FirewallD"><a href="#CentOS-7-下使用-FirewallD" class="headerlink" title="CentOS 7 下使用 FirewallD"></a>CentOS 7 下使用 FirewallD</h3><p>在 CentOS 7 中，引入了一个新的服务，<strong>Firewalld</strong>，下面一张图，让大家明确的了解 Firewall 与 iptables 之间的关系与区别。</p>
+<p><img src="https://havee.me/cdn/images/2015/01/firewall_stack.png" alt="firewall stack"></p>
+<p>安装它，只需</p>
+<pre><code># yum install firewalld
+</code></pre>
+<p>如果需要图形界面的话，则再安装</p>
+<pre><code># yum install firewall-config
+</code></pre>
+<h4 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h4><p>防火墙守护 firewalld 服务引入了一个信任级别的概念来管理与之相关联的连接与接口。它支持 ipv4 与 ipv6，并支持网桥，采用 firewall-cmd (command) 或 firewall-config (gui) 来动态的管理 kernel netfilter 的临时或永久的接口规则，并实时生效而无需重启服务。</p>
+<h5 id="zone"><a href="#zone" class="headerlink" title="zone"></a>zone</h5><p>Firewall 能将不同的网络连接归类到不同的信任级别，Zone 提供了以下几个级别</p>
+<ul>
+<li>drop: 丢弃所有进入的包，而不给出任何响应</li>
+<li>block: 拒绝所有外部发起的连接，允许内部发起的连接</li>
+<li>public: 允许指定的进入连接</li>
+<li>external: 同上，对伪装的进入连接，一般用于路由转发</li>
+<li>dmz: 允许受限制的进入连接</li>
+<li>work: 允许受信任的计算机被限制的进入连接，类似 workgroup</li>
+<li>home: 同上，类似 homegroup</li>
+<li>internal: 同上，范围针对所有互联网用户</li>
+<li>trusted: 信任所有连接</li>
+</ul>
+<h5 id="过滤规则"><a href="#过滤规则" class="headerlink" title="过滤规则"></a>过滤规则</h5><ul>
+<li>source: 根据源地址过滤</li>
+<li>interface: 根据网卡过滤</li>
+<li>service: 根据服务名过滤</li>
+<li>port: 根据端口过滤</li>
+<li>icmp-block: icmp 报文过滤，按照 icmp 类型配置</li>
+<li>masquerade: ip 地址伪装</li>
+<li>forward-port: 端口转发</li>
+<li>rule: 自定义规则</li>
+</ul>
+<p>其中，过滤规则的优先级遵循如下顺序</p>
+<ol>
+<li>source</li>
+<li>interface</li>
+<li>firewalld.conf</li>
+</ol>
+<h4 id="二、使用方法"><a href="#二、使用方法" class="headerlink" title="二、使用方法"></a>二、使用方法</h4><pre><code># systemctl start firewalld         # 启动,
+# systemctl enable firewalld        # 开机启动
+# systemctl stop firewalld          # 关闭
+# systemctl disable firewalld       # 取消开机启动
+</code></pre>
+<p>具体的规则管理，可以使用 <code>firewall-cmd</code>，具体的使用方法可以</p>
+<pre><code>$ firewall-cmd --help
+
+--zone=NAME                         # 指定 zone
+--permanent                         # 永久修改，--reload 后生效
+--timeout=seconds                   # 持续效果，到期后自动移除，用于调试，不能与 --permanent 同时使用
+</code></pre>
+<h5 id="1-查看规则"><a href="#1-查看规则" class="headerlink" title="1. 查看规则"></a>1. 查看规则</h5><p>查看运行状态</p>
+<pre><code>$ firewall-cmd --state
+</code></pre>
+<p>查看已被激活的 Zone 信息</p>
+<pre><code>$ firewall-cmd --get-active-zones
+public
+  interfaces: eth0 eth1
+</code></pre>
+<p>查看指定接口的 Zone 信息</p>
+<pre><code>$ firewall-cmd --get-zone-of-interface=eth0
+public
+</code></pre>
+<p>查看指定级别的接口</p>
+<pre><code>$ firewall-cmd --zone=public --list-interfaces
+eth0
+</code></pre>
+<p>查看指定级别的所有信息，譬如 public</p>
+<pre><code>$ firewall-cmd --zone=public --list-all
+public (default, active)
+  interfaces: eth0
+  sources:
+  services: dhcpv6-client http ssh
+  ports:
+  masquerade: no
+  forward-ports:
+  icmp-blocks:
+  rich rules:
+</code></pre>
+<p>查看所有级别被允许的信息</p>
+<pre><code>$ firewall-cmd --get-service
+</code></pre>
+<p>查看重启后所有 Zones 级别中被允许的服务，即永久放行的服务</p>
+<pre><code>$ firewall-cmd --get-service --permanent
+</code></pre>
+<h5 id="2-管理规则"><a href="#2-管理规则" class="headerlink" title="2. 管理规则"></a>2. 管理规则</h5><pre><code># firewall-cmd --panic-on           # 丢弃
+# firewall-cmd --panic-off          # 取消丢弃
+# firewall-cmd --query-panic        # 查看丢弃状态
+# firewall-cmd --reload             # 更新规则，不重启服务
+# firewall-cmd --complete-reload    # 更新规则，重启服务
+</code></pre>
+<p>添加某接口至某信任等级，譬如添加 eth0 至 public，永久修改</p>
+<pre><code># firewall-cmd --zone=public --add-interface=eth0 --permanent
+</code></pre>
+<p>设置 public 为默认的信任级别</p>
+<pre><code># firewall-cmd --set-default-zone=public
+</code></pre>
+<h6 id="a-管理端口"><a href="#a-管理端口" class="headerlink" title="a. 管理端口"></a>a. 管理端口</h6><p>列出 dmz 级别的被允许的进入端口</p>
+<pre><code># firewall-cmd --zone=dmz --list-ports
+</code></pre>
+<p>允许 tcp 端口 8080 至 dmz 级别</p>
+<pre><code># firewall-cmd --zone=dmz --add-port=8080/tcp
+</code></pre>
+<p>允许某范围的 udp 端口至 public 级别，并永久生效</p>
+<pre><code># firewall-cmd --zone=public --add-port=5060-5059/udp --permanent
+</code></pre>
+<h6 id="b-网卡接口"><a href="#b-网卡接口" class="headerlink" title="b. 网卡接口"></a>b. 网卡接口</h6><p>列出 public zone 所有网卡</p>
+<pre><code># firewall-cmd --zone=public --list-interfaces
+</code></pre>
+<p>将 eth0 添加至 public zone，永久</p>
+<pre><code># firewall-cmd --zone=public --permanent --add-interface=eth0
+</code></pre>
+<p>eth0 存在与 public zone，将该网卡添加至 work zone，并将之从 public zone 中删除</p>
+<pre><code># firewall-cmd --zone=work --permanent --change-interface=eth0
+</code></pre>
+<p>删除 public zone 中的 eth0，永久</p>
+<pre><code># firewall-cmd --zone=public --permanent --remove-interface=eth0
+</code></pre>
+<h6 id="c-管理服务"><a href="#c-管理服务" class="headerlink" title="c. 管理服务"></a>c. 管理服务</h6><p>添加 smtp 服务至 work zone</p>
+<pre><code># firewall-cmd --zone=work --add-service=smtp
+</code></pre>
+<p>移除 work zone 中的 smtp 服务</p>
+<pre><code># firewall-cmd --zone=work --remove-service=smtp
+</code></pre>
+<h6 id="d-配置-external-zone-中的-ip-地址伪装"><a href="#d-配置-external-zone-中的-ip-地址伪装" class="headerlink" title="d. 配置 external zone 中的 ip 地址伪装"></a>d. 配置 external zone 中的 ip 地址伪装</h6><p>查看</p>
+<pre><code># firewall-cmd --zone=external --query-masquerade
+</code></pre>
+<p>打开伪装</p>
+<pre><code># firewall-cmd --zone=external --add-masquerade
+</code></pre>
+<p>关闭伪装</p>
+<pre><code># firewall-cmd --zone=external --remove-masquerade
+</code></pre>
+<h6 id="e-配置-public-zone-的端口转发"><a href="#e-配置-public-zone-的端口转发" class="headerlink" title="e. 配置 public zone 的端口转发"></a>e. 配置 public zone 的端口转发</h6><p>要打开端口转发，则需要先</p>
+<pre><code># firewall-cmd --zone=public --add-masquerade
+</code></pre>
+<p>然后转发 tcp 22 端口至 3753</p>
+<pre><code># firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=3753
+</code></pre>
+<p>转发 22 端口数据至另一个 ip 的相同端口上</p>
+<pre><code># firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toaddr=192.168.1.100
+</code></pre>
+<p>转发 22 端口数据至另一 ip 的 2055 端口上</p>
+<pre><code># firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=2055:toaddr=192.168.1.100
+</code></pre>
+<h6 id="f-配置-public-zone-的-icmp"><a href="#f-配置-public-zone-的-icmp" class="headerlink" title="f. 配置 public zone 的 icmp"></a>f. 配置 public zone 的 icmp</h6><p>查看所有支持的 icmp 类型</p>
+<pre><code># firewall-cmd --get-icmptypes
+destination-unreachable echo-reply echo-request parameter-problem redirect router-advertisement router-solicitation source-quench time-exceeded
+</code></pre>
+<p>列出</p>
+<pre><code># firewall-cmd --zone=public --list-icmp-blocks
+</code></pre>
+<p>添加 echo-request 屏蔽</p>
+<pre><code># firewall-cmd --zone=public --add-icmp-block=echo-request [--timeout=seconds]
+</code></pre>
+<p>移除 echo-reply 屏蔽</p>
+<pre><code># firewall-cmd --zone=public --remove-icmp-block=echo-reply
+</code></pre>
+<h6 id="g-IP-封禁"><a href="#g-IP-封禁" class="headerlink" title="g. IP 封禁"></a>g. IP 封禁</h6><pre><code># firewall-cmd --permanent --add-rich-rule=&quot;rule family=&#39;ipv4&#39; source address=&#39;222.222.222.222&#39; reject&quot;
+</code></pre>
+<p>当然，我们仍然可以通过 ipset 来封禁 ip</p>
+<p>封禁 ip</p>
+<pre><code># firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:ip
+# firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.222
+</code></pre>
+<p>封禁网段</p>
+<pre><code># firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:net
+# firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.0/24
+</code></pre>
+<p>导入 ipset 的 blacklist 规则</p>
+<pre><code># firewall-cmd --permanent --zone=public --new-ipset-from-file=/path/blacklist.xml
+</code></pre>
+<p>如果已经存 blacklist，则需要先删除</p>
+<pre><code># firewall-cmd --get-ipsets
+blacklist
+# firewall-cmd --permanent --zone=public --delete-ipset=blacklist
+</code></pre>
+<p>然后封禁 blacklist</p>
+<pre><code># firewall-cmd --permanent --zone=public --add-rich-rule=&#39;rule source ipset=blacklist drop&#39;
+</code></pre>
+<p>重新载入以生效</p>
+<pre><code># firewall-cmd --reload
+</code></pre>
+<p>查看 blacklist</p>
+<pre><code># firewall-cmd --ipset=blacklist --get-entries
+</code></pre>
+<p>以上都是一些常用方法，更多高级方法，请参考：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Security_Guide/sec-Using_Firewalls.html">https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux&#x2F;7&#x2F;html&#x2F;Security_Guide&#x2F;sec-Using_Firewalls.html</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://fedoraproject.org/wiki/FirewallD">https://fedoraproject.org/wiki/FirewallD</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://havee.me/linux/2014-12/centos-7-records.html" title="CentOS 7 配置记录">← Prev</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://havee.me/internet/2015-01/controlling-color-with-sass-color-functions.html" title="Sass 色彩函数">Next →</a></p>
+</li>
+</ul>
+<p>本文转自 <a target="_blank" rel="noopener" href="https://havee.me/linux/2015-01/using-firewalls-on-centos-7.html">https://havee.me/linux/2015-01/using-firewalls-on-centos-7.html</a>，如有侵权，请联系删除。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
