@@ -116,7 +116,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(18)</small>
+                <small>(19)</small>
             
         </div>
     </li>
@@ -221,7 +221,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(3)</small>
+            <small>(4)</small>
         </div>
         
     </li>
@@ -281,8 +281,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="18">
-<input type="hidden" id="yelog_site_word_count" value="13.7k">
+<input type="hidden" id="yelog_site_posts_number" value="19">
+<input type="hidden" id="yelog_site_word_count" value="14.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -483,6 +483,15 @@
         </a>
         
         
+        <a  class="全部文章 运维 "
+           href="/2023/11/07/linux%E4%BF%AE%E6%94%B9DNS-IP/"
+           data-tag="Linux"
+           data-author="" >
+            <span class="post-title" title="linux修改DNS与IP">linux修改DNS与IP</span>
+            <span class="post-date" title="2023-11-07 09:47:36">2023/11/07</span>
+        </a>
+        
+        
         <a  class="全部文章 笔记 个人随笔 "
            href="/2023/10/29/2023%E5%B9%B410%E6%9C%8829%E6%97%A5/"
            data-tag="日常"
@@ -617,12 +626,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-09 13:59:55'>2023-11-09 13:25</time>
+            发布时间 : <time class="date" title='最后更新: 2023-11-12 19:26:33'>2023-11-09 13:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:420</span>
+        <span>字数:418</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -658,13 +667,30 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在centos下 默认是只启用4个串口，如果你物理机器上有10个串口，那么你就要进行手动添加6个。</p>
-<p>具体操作方法如下：<br>第一步打开&#x2F;etc&#x2F;default&#x2F;grub文件<br>在文件的GRUB_CMDLINE_LINUX下文件末尾添加8250.nr_uarts&#x3D;10</p>
-<p>第二步重新编译grub</p>
-<p>grub2-mkconfig -o &#x2F;boot&#x2F;grub2&#x2F;grub.cfg 在命令行使用这个命令进行更新</p>
-<p>注意如果是<br>UEFI 系统上则需要执行命令 grub2-mkconfig -o &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;centos&#x2F;grub.cfg</p>
+<p>具体操作方法如下：<br>第一步 打开&#x2F;etc&#x2F;default&#x2F;grub文件<br>在文件的GRUB_CMDLINE_LINUX下文件末尾添加8250.nr_uarts&#x3D;10</p>
+<p>第二步 重新编译grub</p>
+<p> 在命令行使用这个命令进行更新</p>
+<pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
+</code></pre>
+<p>注意如果是<br>UEFI 系统上则需要执行命令 </p>
+<pre><code>grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
+</code></pre>
 <p>如何查看是不是UEFI 你可以在启动的时候进入bios里面查看一下是不是设置的Uefi</p>
 <p>这样就可以解决centos下默认只是别4个串口的问题。</p>
-<p>查看串口信息的方法<br>root@localhost ~]# cat &#x2F;proc&#x2F;tty&#x2F;driver&#x2F;serial<br>serinfo:1.0 driver revision:<br>0: uart:16550A port:000003F8 irq:4 tx:0 rx:0<br>1: uart:16550A port:000002F8 irq:3 tx:242 rx:0<br>2: uart:16550A port:000003E8 irq:6 tx:0 rx:0<br>3: uart:16550A port:000002E8 irq:6 tx:0 rx:0<br>4: uart:16550A port:00000240 irq:11 tx:0 rx:0<br>5: uart:16550A port:00000248 irq:11 tx:0 rx:0<br>6: uart:16550A port:00000250 irq:11 tx:0 rx:0<br>7: uart:16550A port:00000258 irq:11 tx:0 rx:0<br>8: uart:16550A port:000002F0 irq:6 tx:0 rx:0<br>9: uart:16550A port:000002E0 irq:6 tx:0 rx:0</p>
+<p>查看串口信息的方法  </p>
+<pre><code>root@localhost ~\]# cat /proc/tty/driver/serial  
+serinfo:1.0 driver revision:  
+0: uart:16550A port:000003F8 irq:4 tx:0 rx:0  
+1: uart:16550A port:000002F8 irq:3 tx:242 rx:0  
+2: uart:16550A port:000003E8 irq:6 tx:0 rx:0  
+3: uart:16550A port:000002E8 irq:6 tx:0 rx:0  
+4: uart:16550A port:00000240 irq:11 tx:0 rx:0  
+5: uart:16550A port:00000248 irq:11 tx:0 rx:0  
+6: uart:16550A port:00000250 irq:11 tx:0 rx:0  
+7: uart:16550A port:00000258 irq:11 tx:0 rx:0  
+8: uart:16550A port:000002F0 irq:6 tx:0 rx:0  
+9: uart:16550A port:000002E0 irq:6 tx:0 rx:0
+</code></pre>
 <p>解释备注：如果你发送了信息则tx上回显示字节在增长，如果你接收到信息rx：会显示接受的字节信息。</p>
 <p>设置波特率的方法：<br>stty -F&#x2F;dev&#x2F;ttyS0 speed 9600 cs8 -cstopb -parenb<br>8数据位 1停止位 无校验</p>
 <p>查看当前的串口波特率方法：<br>stty -F &#x2F;dev&#x2F;ttyS0</p>
