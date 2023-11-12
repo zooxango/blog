@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持 | Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持 | Hexo">
+  <title>Windows平台安装Alist教程 | Hexo</title>
+  <meta name="keywords" content=" alsit ">
+  <meta name="description" content="Windows平台安装Alist教程 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，新校区都还没去看过。 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近除了打工就是准备自考 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com alist：zooxango.eu.org">
 <meta property="og:type" content="website">
@@ -590,9 +590,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-Windows平台安装Alist教程" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">利用Cloudflare为基于GitHub的Hexo博客添加HTTPS支持</h1>
+        <h1 class="article-title">Windows平台安装Alist教程</h1>
     
     <div class="article-meta">
         
@@ -609,15 +609,22 @@
         </span>
         
         
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">alsit</a>
+            
+        </span>
+        
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-09 13:23:17'>2023-10-16 21:20</time>
+            发布时间 : <time class="date" title='最后更新: 2023-11-12 19:09:30'>2023-11-12 14:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:825</span>
+        <span>字数:1.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -636,7 +643,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E5%89%8D%E8%A8%80"><span class="toc-text"> ● 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E6%B3%A8%E5%86%8C-Cloudflare"><span class="toc-text">● 注册 Cloudflare</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9"><span class="toc-text">● 添加站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E4%BF%AE%E6%94%B9DNS"><span class="toc-text">● 修改DNS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E5%BC%80%E5%90%AF-HTTPS"><span class="toc-text">● 开启 HTTPS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%8F-%E9%87%8D%E5%AE%9A%E5%90%91%E5%BC%BA%E5%88%B6-HTTPS"><span class="toc-text">● 重定向强制 HTTPS</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%9B%98%E8%81%9A%E5%90%88%E7%A5%9E%E5%99%A8%EF%BC%8C%E6%89%93%E9%80%A0%E7%81%B5%E6%B4%BB%E7%9A%84%E7%A7%81%E4%BA%BA%E4%BA%91%E5%AD%98%E5%82%A8"><span class="toc-text">网盘聚合神器，打造灵活的私人云存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6"><span class="toc-text">1.前置条件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1%E5%AE%89%E8%A3%85AList"><span class="toc-text">1.1安装AList</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2%E5%90%AF%E5%8A%A8"><span class="toc-text">1.2启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3%E7%99%BB%E5%BD%95"><span class="toc-text">1.3登录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4%E6%94%B9%E5%AF%86"><span class="toc-text">1.4改密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%96%87%E4%BB%B6"><span class="toc-text">1.5开机启动文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="toc-text">1.6开机自启操作步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0%E4%BA%91%E7%9B%98%E5%AD%98%E5%82%A8"><span class="toc-text">2.添加云盘存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E6%B7%BB%E5%8A%A0%E4%BA%91%E7%9B%98%EF%BC%88%E6%BC%94%E7%A4%BA%E4%B8%80%E4%B8%AA%E5%85%B6%E4%BD%99%E7%9A%84%E7%9C%8B%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%EF%BC%89"><span class="toc-text">2.1 添加云盘（演示一个其余的看官方文档）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%B7%E6%96%B0%E4%BB%A4%E7%89%8C"><span class="toc-text">2.2 阿里云刷新令牌</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%98%A0%E5%B0%84%E6%9C%AC%E5%9C%B0%E7%9B%98"><span class="toc-text">3.映射本地盘</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E4%B8%8B%E8%BD%BDRaiDrive"><span class="toc-text">3.1 下载RaiDrive</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E5%AE%89%E8%A3%85"><span class="toc-text">3.2 安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-%E8%AE%BE%E7%BD%AE"><span class="toc-text">3.3 设置</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -652,32 +659,99 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="●-前言"><a href="#●-前言" class="headerlink" title=" ● 前言"></a> ● 前言</h2><p>GitHub Pages 自带的域名（xxx.github.io）支持开启 https 服务，可以在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】即可，但是如果你设置了自定义域名的话，就比较复杂了，因为 hexo 博客是托管在 GitHub 上的，没有自己的服务器，因此也不支持上传 SSL 证书，从2018年5月1日起，GitHub官方也支持自定义域名开启https了，实现方法可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/99228310">《利用官方支持为基于GitHub Pages的Hexo博客启用HTTPS》</a>，另外一种方法就利用 Cloudflare 的 CDN 中转来启用 HTTPS，这种方法的弊端就是国内访问速度可能会变慢，本文主要讲述这种方法</p>
-<p>Cloudflare 是一家美国的跨国科技企业，以向客户提供网站安全管理、性能优化及相关的技术支持为主要业务，它提供了免费的 https 服务，注意不是应用SSL证书，实现原理：用户到CDN服务器的连接为 https 方式，而CDN服务器到 GithubPages 服务器的连接为 http 方式，在CDN服务器那里加上反向代理</p>
-<h2 id="●-注册-Cloudflare"><a href="#●-注册-Cloudflare" class="headerlink" title="● 注册 Cloudflare"></a>● 注册 Cloudflare</h2><p>到 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/sign-up">Cloudflare官网</a> 注册账号<br><img src="https://s2.loli.net/2023/10/16/FD9C8Mz7NswfmJp.png"></p>
-<h2 id="●-添加站点"><a href="#●-添加站点" class="headerlink" title="● 添加站点"></a>● 添加站点</h2><p>添加你的站点，一直下一步即可  </p>
-<p><img src="https://s2.loli.net/2023/10/16/pYbFwoIcu5lOqKg.png" alt="02.png"></p>
-<p><img src="https://s2.loli.net/2023/10/16/fBMrCPzyvpq2EcH.png" alt="03.png"></p>
-<p>如果你已经在域名服务商那里解析过域名的话，之后就会出现你域名的解析列表，如果还没有解析过，可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/82121420#font_colorFF000__Hexo_font_270">《为hexo博客配置个性域名》</a><br><img src="https://s2.loli.net/2023/10/16/AczCoVme9KBb8Iw.png" alt="04.png"></p>
-<h2 id="●-修改DNS"><a href="#●-修改DNS" class="headerlink" title="● 修改DNS"></a>● 修改DNS</h2><p>点击下一步 Cloudflare 会提供给你两个 DNS 地址  </p>
-<p><img src="https://s2.loli.net/2023/10/16/6N475RGi1bVlMsY.png" alt="05.png"></p>
-<p>到域名服务商那里修改DNS，以阿里云为例，依次选择【控制台】-【域名】，选择你的域名，点击【管理】-【修改DNS】，将上面 Cloudflare 提供的两个 DNS 地址填进去，会过几分钟才生效<br><img src="https://s2.loli.net/2023/10/16/8ZkAIbGSu1JBdiN.png" alt="08.png"></p>
-<p><img src="https://s2.loli.net/2023/10/16/AhHc7e1Ln8ikBqY.png" alt="09.png"></p>
-<p><img src="https://s2.loli.net/2023/10/16/4Kgt8B9AQTNWPzh.png" alt="10.png"></p>
-<h2 id="●-开启-HTTPS"><a href="#●-开启-HTTPS" class="headerlink" title="● 开启 HTTPS"></a>● 开启 HTTPS</h2><p>在 Cloudflare 管理页面，点击【Crypto】选项，选择 SSL 的模式为【full】，注意：在CloudFlare 上激活站点后，可能需要24小时才能颁发新证书，耐心等待即可  </p>
-<p>  <img src="https://s2.loli.net/2023/10/16/893SzIap5gMvF2N.png" alt="07.png"></p>
-<p>关于三种模式 Flexible、Full、Full (Strict) 的区别：</p>
-<ul>
-<li><p>Flexible：访客与 Cloudflare 之间是加密的，Cloudflare 到站点服务器是不加密的</p>
-</li>
-<li><p>Full：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它不会验证你服务器上的证书是否合法，因此你可以在你服务器上安装任何证书，包括自签名证书</p>
-</li>
-<li><p>Full (strict)：访客到 Cloudflare、Cloudflare 到站点服务器都是加密的，它会验证你服务器上的证书是否合法，你必须在你的服务器上安装有可信赖的CA证书，并且这个证书必须是未过期，包含有域名等信息的</p>
-</li>
-</ul>
-<p>至此，我们的域名就支持 https 访问了，但是当用户输入 <a target="_blank" rel="noopener" href="http://xxxxxx/">http://xxxxxx</a> 访问时，浏览器依旧会以 http 协议来访问，并不会跳转到 https，这时候就需要利用重定向来解决了</p>
-<h2 id="●-重定向强制-HTTPS"><a href="#●-重定向强制-HTTPS" class="headerlink" title="● 重定向强制 HTTPS"></a>● 重定向强制 HTTPS</h2><p>Cloudflare 提供了一个名叫 Page Rules 的页面规则的功能，我们可以利用此功能对 URL 做一些处理，当用户访问是 HTTP 的时候重定向到 HTTPS，点击【Page Rules】选项，点击【Create Page Rules】，新建如下规则并保存即可<br><img src="https://s2.loli.net/2023/10/16/hG6x8M1EgFJps3D.png" alt="06.png"></p>
-<p>现在我们的 Hexo 博客就实现了全站 HTTPS！</p>
+        <h3 id="网盘聚合神器，打造灵活的私人云存储"><a href="#网盘聚合神器，打造灵活的私人云存储" class="headerlink" title="网盘聚合神器，打造灵活的私人云存储"></a>网盘聚合神器，打造灵活的私人云存储</h3><p>AList是一个支持多种存储，可以实现多种网盘挂载为硬盘，并可以挂载不限量的网络资源。支持网页浏览和 WebDAV 的文件列表程序。或者说是一个网盘聚合器。可以将你的网盘挂载到一起，方便统一管理。</p>
+<p>重点：免费!                     AList文档：<a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/">https://alist.nn.ci/zh/guide/</a></p>
+<p>支持的网盘有：本地电脑磁盘、FTP、SFTP、WebDAV、SMB、对象存储、115、123、百度、阿里云、MEGA、谷歌云盘、谷歌相册、移动、天翼、onedrive、pikpak、迅雷、夸克、蓝奏云、迅雷、Cloudreve等等。</p>
+<h3 id="1-前置条件"><a href="#1-前置条件" class="headerlink" title="1.前置条件"></a>1.前置条件</h3><h4 id="1-1安装AList"><a href="#1-1安装AList" class="headerlink" title="1.1安装AList"></a>1.1安装AList</h4><p>官网下载地址：<a target="_blank" rel="noopener" href="https://github.com/alist-org/alist/releases" title="https://github.com/alist-org/alist/releases">https://github.com/alist-org/alist/releases</a></p>
+<p>Windows下傻瓜式安装，不多赘述。</p>
+<h4 id="1-2启动"><a href="#1-2启动" class="headerlink" title="1.2启动"></a>1.2启动</h4><p>选择在终端打开，启动 alist 服务。</p>
+<p> <img src="https://s2.loli.net/2023/11/12/rDkHv2zeLGBnT8g.png"></p>
+<blockquote>
+<p>运行程序</p>
+</blockquote>
+<pre><code>.\alist.exe server
+</code></pre>
+<blockquote>
+<p>获得管理员信息和密码</p>
+</blockquote>
+<pre><code>.\alist.exe admin
+</code></pre>
+<p><img src="https://s2.loli.net/2023/11/12/HOeCQW6E4gKjLo2.png"></p>
+<p>出现这样的代表成功了，<strong>把密码记好，并且不要关这个cmd</strong></p>
+<p>账号：admin      密码：xxx（如上图）</p>
+<h4 id="1-3登录"><a href="#1-3登录" class="headerlink" title="1.3登录"></a>1.3登录</h4><p>浏览器默认访问网址:<a href="https://link.zhihu.com/?target=http://127.0.0.1:5244/" title="127.0.0.1:5244">127.0.0.1:5244</a></p>
+<p>使用 admin 和 password 登录。</p>
+<p><img src="https://s2.loli.net/2023/11/12/ul16IGJRTLHFCd8.png"></p>
+<p>登陆后的界面：</p>
+<p><img src="https://s2.loli.net/2023/11/12/fv78mFqecHzMR5K.png"></p>
+<h4 id="1-4改密"><a href="#1-4改密" class="headerlink" title="1.4改密"></a>1.4改密</h4><p>在 管理 - 个人资料 修改密码，并重新登陆。</p>
+<p>如果忘记密码可以使用命令 alist.exe admin 查看修改后的密码是多少：</p>
+<p><img src="https://s2.loli.net/2023/11/12/Ry5rOIDK3gZSGwP.png"></p>
+<h4 id="1-5开机启动文件"><a href="#1-5开机启动文件" class="headerlink" title="1.5开机启动文件"></a>1.5开机启动文件</h4><p>用 .VBS 脚本启动和停止，分别创建两个脚本 分别是 启动.vbs 和 停止.vbs</p>
+<p>直接在和<strong>Alist启动程序<strong><strong>同级</strong></strong>文件夹里面</strong>双击启动即可，不用担心没有反应 直接去 浏览器访问即可。  两个启动脚本：</p>
+<p>启动.vbs：</p>
+<pre><code>Dim ws
+Set ws = Wscript.CreateObject(&quot;Wscript.Shell&quot;)
+ws.run &quot;alist.exe server&quot;,vbhide
+Wscript.quit
+</code></pre>
+<p>停止.vbs：</p>
+<pre><code>Dim ws
+Set ws = Wscript.CreateObject(&quot;Wscript.Shell&quot;)
+ws.run &quot;taskkill /f /im alist.exe&quot;,0
+Wscript.quit
+</code></pre>
+<p>脚本不会创建的可以自行下载：<a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/DHPMhRtKUzY/folder/63e0961eae317bd4d4d945cda69dbb00f9837fb7" title="脚本下载">脚本下载</a><br>脚本不会使用的可以看看视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1DG411s7j5?t=266.2" title="参考视频">参考视频</a></p>
+<p>Alist启动.bat  电脑无窗口开机启动（与上面那个启动一样如果那个不行就用这个）</p>
+<pre><code>@echo of
+
+if &quot;%1&quot; == &quot;h&quot; goto begin
+
+mshta Vbscript:createobject(&quot;wscript.shell&quot;).run(&quot;%~nx0 h&quot;,0)(window.close)&amp;&amp;exit
+
+:begin
+
+alist.exe server
+</code></pre>
+<p>当然如果你要搭载到本地用到RaiDrive那么用下面这个启动：把蓝色那本分换成你自己的文件地址</p>
+<p><img src="https://img-blog.csdnimg.cn/d80abe0edb744cfa9799283d124662b5.png"></p>
+<p> <strong>上面我发的链接里有该文件</strong></p>
+<h4 id="1-6开机自启操作步骤"><a href="#1-6开机自启操作步骤" class="headerlink" title="1.6开机自启操作步骤"></a>1.6开机自启操作步骤</h4><p>使用系统服务注册工具:NSSM</p>
+<p><img src="https://img-blog.csdnimg.cn/c85e0882b0604f66bf744e460bb77586.jpeg"></p>
+<p> 下载好的NSSM文件里面的应用程序一定要与alist.exe文件放在一起</p>
+<p><img src="https://img-blog.csdnimg.cn/9c7e95202bf346c98eedb1bc41faffb3.jpeg"></p>
+<p>win+r打开命令行输入：nssm install alist   </p>
+<p> <img src="https://img-blog.csdnimg.cn/bd3b228bcd994017b98150495e4d9f85.jpeg"></p>
+<p>回车会出现他的界面把同文件夹里的alist.exe文件放进去</p>
+<p>剩余的空看图片（就路径path不同）</p>
+<p> <img src="https://img-blog.csdnimg.cn/6332d307ec8a4af48657aabc01ac6108.png"></p>
+<p>后台占用非常小的CPU和内存，完全放心开启自启动。 </p>
+<h3 id="2-添加云盘存储"><a href="#2-添加云盘存储" class="headerlink" title="2.添加云盘存储"></a>2.添加云盘存储</h3><h4 id="2-1-添加云盘（演示一个其余的看官方文档）"><a href="#2-1-添加云盘（演示一个其余的看官方文档）" class="headerlink" title="2.1 添加云盘（演示一个其余的看官方文档）"></a>2.1 添加云盘（演示一个其余的看<a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/drivers/common.html" title="官方文档">官方文档</a>）</h4><p><img src="https://img-blog.csdnimg.cn/21f05372dabb47fd980e7299279e60e9.png"></p>
+<p> AList管理后台中 存储 - 添加 - 阿里云盘Open ，挂载路径可以自定义，比如我写的 &#x2F;阿里云盘。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/8b133d76e09fd68771ceaffe561d3f54.png"></p>
+<h4 id="2-2-阿里云刷新令牌"><a href="#2-2-阿里云刷新令牌" class="headerlink" title="2.2 阿里云刷新令牌"></a>2.2 阿里云刷新令牌</h4><p>参考官方文档：<a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/drivers/aliyundrive/_open.html">https://alist.nn.ci/zh/guide/drivers/aliyundrive\_open.html</a></p>
+<p>从该地址点击 Go to login 跳转阿里云盘登陆 <a target="_blank" rel="noopener" href="https://alist.nn.ci/tool/aliyundrive/request.html">https://alist.nn.ci/tool/aliyundrive/request.html</a></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/62a621c3ad128f09f30d73defe357c0d.png"><br>任一方式登陆即可，比如我使用扫码登陆，登录后会点击允许</p>
+<p> <img src="https://img-blog.csdnimg.cn/img_convert/68e3fdfeb3381b4e2c9ec16a584c5305.png"></p>
+<p>页面会自动跳转到 refresh_token 展示页</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/a297dbcaea45dde62daede7e9a5e2774.png"><br>复制 - 粘贴 到 Alist 后台</p>
+<p> <img src="https://img-blog.csdnimg.cn/img_convert/6ba33ef62bd459d25af3289f84244de5.png"></p>
+<p>2.3 查看云盘文件<br>添加成功后的样子如下图，点击主页查看云盘文件。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6ace19c8fe9a6699c00c036f2b45bd8f.png" alt="image-20230308144857319"></p>
+<p> <img src="https://img-blog.csdnimg.cn/271497f2df0e49c1b186e6462e255b12.png"></p>
+<p> <strong>当然你的可能没那花</strong>哈哈哈！！！</p>
+<p>其他网盘方法类似，如出一辙，傻瓜式按步骤配置即可。</p>
+<h3 id="3-映射本地盘"><a href="#3-映射本地盘" class="headerlink" title="3.映射本地盘"></a>3.映射本地盘</h3><p>在网页上查看和管理还是非常麻烦的，当然我们可以映射到本地磁盘</p>
+<h4 id="3-1-下载RaiDrive"><a href="#3-1-下载RaiDrive" class="headerlink" title="3.1 下载RaiDrive"></a>3.1 下载RaiDrive</h4><p>官网：<a target="_blank" rel="noopener" href="https://www.raidrive.com/">https://www.raidrive.com/</a></p>
+<p>不太好下所以我的最上方链接文档里面有最新版本的</p>
+<h4 id="3-2-安装"><a href="#3-2-安装" class="headerlink" title="3.2 安装"></a>3.2 安装</h4><p>一路下一步，设置好安装路径即可。安装好启动如图：<strong>设置中文</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/7477e1c964ee4121be440c59396b72cf.png"></p>
+<p> <img src="https://img-blog.csdnimg.cn/16e461112324462d8fdb336f89def9f8.png"></p>
+<h4 id="3-3-设置"><a href="#3-3-设置" class="headerlink" title="3.3 设置"></a>3.3 设置</h4><p>选择 添加 - 服务类型里的 NAS - WebDAV，将地址取消勾选，然后填写：</p>
+<p>ip地址: 127.0.0.1<br>端口号：5244<br>路径：&#x2F;dav<br>账户：admin<br>密码：xxx(自己改过的密码)</p>
+<p><img src="https://img-blog.csdnimg.cn/e87c9e207b704337bb8c86bdd24f7b71.png"><br>连接即可，打开后可以看到挂载的盘和盘里的内容：</p>
+<p> <img src="https://img-blog.csdnimg.cn/img_convert/5e98c42b2e4b9a1e82cd47af403cf232.png"></p>
+<p> 当然还可以让别人公网访问（可以用frp或者ddns…）</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
