@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>linux修改DNS与IP | Hexo</title>
-  <meta name="keywords" content=" Linux ">
+  <meta name="keywords" content="">
   <meta name="description" content="linux修改DNS与IP | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，新校区都还没去看过。 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近除了打工就是准备自考 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com alist：zooxango.eu.org">
@@ -221,7 +221,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(4)</small>
+            <small>(3)</small>
         </div>
         
     </li>
@@ -483,9 +483,9 @@
         </a>
         
         
-        <a  class="全部文章 运维 "
+        <a  class="全部文章 "
            href="/2023/11/07/linux%E4%BF%AE%E6%94%B9DNS-IP/"
-           data-tag="Linux"
+           data-tag=""
            data-author="" >
             <span class="post-title" title="linux修改DNS与IP">linux修改DNS与IP</span>
             <span class="post-date" title="2023-11-07 09:47:36">2023/11/07</span>
@@ -607,31 +607,16 @@
         
         
         
-        <span class="book">
-            <i class="iconfont icon-category"></i>
-            
-            
-            <a  data-rel="运维">运维</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            <i class="iconfont icon-tag"></i>
-            
-            <a class="color1">Linux</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-12 19:22:00'>2023-11-07 09:47</time>
+            发布时间 : <time class="date" title='最后更新: 2023-11-13 14:40:06'>2023-11-07 09:47</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:569</span>
+        <span>字数:568</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -645,6 +630,17 @@
             </span>
         </span>
         
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
         
     </div>
     
@@ -694,7 +690,7 @@ GATEWAY=192.168.1.1(设置本机连接的网关的IP地址。例如，网关为1
 <h2 id="3-修改ip"><a href="#3-修改ip" class="headerlink" title="3.修改ip"></a>3.修改ip</h2><p>修改对应的网卡的IP地址的配置文件</p>
 <pre><code>$ vim /etc/sysconfig/network-scripts/ifcfg-eth0
 </code></pre>
-<p>修改为一下内容</p>
+<p>修改以下内容</p>
 <pre><code>DEVICE=eth0 #描述网卡对应的设备别名，例如ifcfg-eth0的文件中它为eth0
 BOOTPROTO=static #设置网卡获得ip地址的方式，可能的选项为static，dhcp或bootp，分别对应静态指定的 ip地址，通过dhcp协议获得的ip地址，通过bootp协议获得的ip地址
 BROADCAST=192.168.0.255 #对应的子网广播地址
@@ -718,6 +714,31 @@ ONBOOT=yes #系统启动时是否设置此网络接口，设置为yes时，系�
 </p>
 
 
+
+
+    <div id="comments">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81OTA4NS8zNTU0Nw==">
+        <script type="text/javascript">
+			(function(d, s) {
+				var j, e = d.getElementsByTagName(s)[0];
+
+				if (typeof LivereTower === 'function') { return; }
+
+				j = d.createElement(s);
+				window.livereOptions = {
+					eagerLoading: true,
+					scrollEventTargetSelector: '#post'
+                }
+				j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+				j.async = true;
+				e.parentNode.insertBefore(j, e);
+			})(document, 'script');
+        </script>
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
 
 
 
@@ -1046,6 +1067,25 @@ ONBOOT=yes #系统启动时是否设置此网络接口，设置为yes时，系�
             initPhotoSwipeFromDOM(gallerySelector);
         }
         
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
         
     }
 
