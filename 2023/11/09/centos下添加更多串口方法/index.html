@@ -413,7 +413,7 @@
         
         <a id="top" class="全部文章 笔记 折腾笔记 "
            href="/2021/05/11/Hexo+GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BABlog/"
-           data-tag="Git,Hexo,3-hexo,GitHub"
+           data-tag="Hexo,3-hexo,Git,GitHub"
            data-author="" >
             <span class="post-title" title="GitHub+Hexo搭建个人Blog">GitHub+Hexo搭建个人Blog</span>
             <span class="post-date" title="2021-05-11 22:12:50">2021/05/11</span>
@@ -440,7 +440,7 @@
         
         <a  class="全部文章 笔记 折腾笔记 "
            href="/2023/11/12/Hexo+Git%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAblog/"
-           data-tag="Git,Hexo"
+           data-tag="Hexo,Git"
            data-author="" >
             <span class="post-title" title="Hexo+Git服务器搭建blog">Hexo+Git服务器搭建blog</span>
             <span class="post-date" title="2023-11-12 16:32:21">2023/11/12</span>
@@ -626,12 +626,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-12 19:26:33'>2023-11-09 13:25</time>
+            发布时间 : <time class="date" title='最后更新: 2023-11-15 11:09:55'>2023-11-09 13:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:418</span>
+        <span>字数:415</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -692,8 +692,13 @@ serinfo:1.0 driver revision:
 9: uart:16550A port:000002E0 irq:6 tx:0 rx:0
 </code></pre>
 <p>解释备注：如果你发送了信息则tx上回显示字节在增长，如果你接收到信息rx：会显示接受的字节信息。</p>
-<p>设置波特率的方法：<br>stty -F&#x2F;dev&#x2F;ttyS0 speed 9600 cs8 -cstopb -parenb<br>8数据位 1停止位 无校验</p>
-<p>查看当前的串口波特率方法：<br>stty -F &#x2F;dev&#x2F;ttyS0</p>
+<p>设置波特率的方法：  </p>
+<pre><code>stty -F/dev/ttyS0 speed 9600 cs8 -cstopb -parenb
+</code></pre>
+<p>8数据位 1停止位 无校验</p>
+<p>查看当前的串口波特率方法：  </p>
+<pre><code>stty -F /dev/ttyS0
+</code></pre>
 <p>注意：两者的波特率要一致，不一致就收不到。</p>
 
       
@@ -706,18 +711,6 @@ serinfo:1.0 driver revision:
     <a  class="dashang" onclick="dashangToggle()">赏</a>
 </p>
 
-
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Centos下添加更多串口方法</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">418</span></p>
-    <p><span class="copy-title">本文作者:</span><a  title="xango&#39;s">xango&#39;s</a></p>
-    <p><span class="copy-title">发布时间:</span>2023-11-09, 13:25:21</p>
-    <p><span class="copy-title">最后更新:</span>2023-11-12, 19:26:33</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2023/11/09/centos%E4%B8%8B%E6%B7%BB%E5%8A%A0%E6%9B%B4%E5%A4%9A%E4%B8%B2%E5%8F%A3%E6%96%B9%E6%B3%95/" title="Centos下添加更多串口方法">https://xango.eu.org/2023/11/09/centos%E4%B8%8B%E6%B7%BB%E5%8A%A0%E6%9B%B4%E5%A4%9A%E4%B8%B2%E5%8F%A3%E6%96%B9%E6%B3%95/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
-    </p>
-</div>
 
 
 
