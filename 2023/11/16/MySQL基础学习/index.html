@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>2023年最新黑群晖DSM7.2引导编译保姆教程 | Hexo</title>
-  <meta name="keywords" content=" 群晖 ">
-  <meta name="description" content="2023年最新黑群晖DSM7.2引导编译保姆教程 | Hexo">
+  <title>MySQL快速起步 | Hexo</title>
+  <meta name="keywords" content=" CentOS ">
+  <meta name="description" content="MySQL快速起步 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，新校区都还没去看过。 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近除了打工就是准备自考 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com alist：zooxango.eu.org">
 <meta property="og:type" content="website">
@@ -621,9 +621,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-黑群晖DSM7.2引导编译教程" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-MySQL基础学习" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">2023年最新黑群晖DSM7.2引导编译保姆教程</h1>
+        <h1 class="article-title">MySQL快速起步</h1>
     
     <div class="article-meta">
         
@@ -633,9 +633,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="笔记">笔记</a> > 
-            
-            <a  data-rel="笔记&lt;---&gt;折腾笔记">折腾笔记</a>
+            <a  data-rel="运维">运维</a>
             
         </span>
         
@@ -643,19 +641,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">群晖</a>
+            <a class="color2">CentOS</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-15 17:23:35'>2023-11-09 14:25</time>
+            发布时间 : <time class="date" title='最后更新: 2023-11-16 16:46:36'>2023-11-16 16:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:3k</span>
+        <span>字数:5.7k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -674,9 +672,9 @@
     
     <div class="article-meta">
         <span class="origin">原文:
-            <a href="https://zhuanlan.zhihu.com/p/639396674" target="_blank">
+            <a href="https://www.kevinlu98.cn/archives/166.htm" target="_blank">
                 
-                2023年最新黑群晖DSM7.2引导编译保姆教程【ESXi虚拟机+ARPL引导】
+                MySQL快速起步-MR丶冷文
                 
             </a>
         </span>
@@ -684,7 +682,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="toc-text">安装过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-text">后记</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker%E5%AE%89%E8%A3%85MySQL"><span class="toc-text">Docker安装MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Docker"><span class="toc-text">安装Docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%89%E5%8F%96MySQL%E9%95%9C%E5%83%8F"><span class="toc-text">拉取MySQL镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8MySQL%E5%AE%B9%E5%99%A8"><span class="toc-text">启动MySQL容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5MySQL%E5%AE%B9%E5%99%A8"><span class="toc-text">连接MySQL容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8MySQL%E5%AE%B9%E5%99%A8"><span class="toc-text">使用MySQL容器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DDL%EF%BC%88%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80%EF%BC%89%E5%AD%A6%E4%B9%A0"><span class="toc-text">DDL（数据定义语言）学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%93"><span class="toc-text">创建库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D"><span class="toc-text">命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-text">字符集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99"><span class="toc-text">排序规则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%A1%A8"><span class="toc-text">创建表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95-1"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-text">索引</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E8%A1%A8"><span class="toc-text">修改表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%97"><span class="toc-text">添加列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%88%97"><span class="toc-text">修改列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%97"><span class="toc-text">删除列</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%A1%A8"><span class="toc-text">删除表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DDL%EF%BC%88%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E8%AF%AD%E8%A8%80%EF%BC%89%E5%AD%A6%E4%B9%A0"><span class="toc-text">DDL（数据操作语言）学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SELECT%E8%AF%AD%E5%8F%A5"><span class="toc-text">SELECT语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#INSERT%E8%AF%AD%E5%8F%A5"><span class="toc-text">INSERT语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UPDATE%E8%AF%AD%E5%8F%A5"><span class="toc-text">UPDATE语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DELETE%E8%AF%AD%E5%8F%A5"><span class="toc-text">DELETE语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%94%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-text">联表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#INNER-JOIN"><span class="toc-text">INNER JOIN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LEFT-JOIN"><span class="toc-text">LEFT JOIN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RIGHT-JOIN"><span class="toc-text">RIGHT JOIN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FULL-JOIN"><span class="toc-text">FULL JOIN</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL%E4%B8%AD%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">MySQL中的子查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">子查询的基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2%E7%9A%84%E7%A4%BA%E4%BE%8B"><span class="toc-text">子查询的示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">子查询的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E9%87%8F%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">标量子查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">表子查询</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-text">MySQL常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="toc-text">字符串函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CONCAT"><span class="toc-text">CONCAT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SUBSTRING"><span class="toc-text">SUBSTRING</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#REPLACE"><span class="toc-text">REPLACE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-text">日期和时间函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NOW"><span class="toc-text">NOW</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DATE-FORMAT"><span class="toc-text">DATE_FORMAT</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="toc-text">数学函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ABS"><span class="toc-text">ABS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ROUND"><span class="toc-text">ROUND</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-text">聚合函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#COUNT"><span class="toc-text">COUNT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SUM"><span class="toc-text">SUM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AVG"><span class="toc-text">AVG</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -700,142 +698,364 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h2><p><strong>关于ARPL引导与选择</strong></p>
-<p>ARPL是巴西一位大神（github代号：fbelavenuto）开发的黑群晖系统引导在线编译工具，支持物理机和虚拟机。物理机我看站内很多大佬都分享过，所以我今天特地分享虚拟机。</p>
-<p>关于这个ARPL引导编译工具目前有三个版本：</p>
-<p><img src="https://pic4.zhimg.com/v2-a8e4d996e2985407691d7013cd27dfc7_r.jpg"></p>
-<p>第一个版本便是原作者（巴西大佬fbelavenuto）写的，不过这位大佬留言说因为个人原因近期不会在更新，最新发布的版本还是在2月28号，那个时候群晖DSM7.2系统还没正式发布，所以能安装的最高系统也只能是DSM7.1了。</p>
-<p><img src="https://pic1.zhimg.com/v2-b72926d7fdce22b493ab91931057aaf8_r.jpg"></p>
-<p>第二个版本是国内大佬（github代号：wjz304）根据巴西大佬的版本同步汉化的，提供了中文的操作界面，并且针对国内网络环境进行了加速处理。因为巴西大佬的停更，这个版本也跟着停更了，不过这位大佬说非常期待巴西大佬的回归，到时候他还是会继续跟着推出原版的汉化版。</p>
-<p><img src="https://pic4.zhimg.com/v2-5860ffad3fe94cad0ce8c9ab9f6efccb_r.jpg"></p>
-<p>第三个版本还是国内这位大佬（wjz304）写出来的。他是原版ARPL引导的修改版，并且一直在更新。截止我写这篇文章（2023&#x2F;6&#x2F;6)，它最新的更新进度甚至在16小时以前。除了汉化与加速，还让我们通过最新版本的编译，可以轻松的体验到群晖最新的DSM7.2系统，所以，不用我说，你知道该怎么选对吧？</p>
-<p><img src="https://pic1.zhimg.com/v2-f3d8ee50d404cd8b84d0c640ad052930_r.jpg"></p>
-<p>打开wjz304大佬ARPL引导的最新发布页面可以看到有两个版本可下载：img用于实体物理机，vmdk用于虚拟机。我选择的是vmdk-flat版本，选择它的原因是我直接可以使用它的配置文件而不需要在使用StarWind V2V Image Converter转换了！</p>
-<p>PS：我在这里标注的大佬项目名称主要是方便打不开的小伙伴度娘使用，国内还是有热心网友搬运和分享的。</p>
-<p><img src="https://pic2.zhimg.com/v2-47d3c504dec2ba68e89d893e490eca49_r.jpg"></p>
-<p>下载之后是一个zip的压缩文件，解压出来得到上图两个文件。</p>
-<p>到这里ARPL引导搞定，我们回到ESXi虚拟机。</p>
-<p><strong>ESXi虚拟机的设置部分</strong></p>
-<p><img src="https://pic2.zhimg.com/v2-70b74ea4a4109d1122c7cd96061d71d9_r.jpg"></p>
-<p>开始之前请确认ESXi虚拟机中的vswithc0网络混杂模式、MAC地址更改、伪传输都是选择的“接受”，这个在之前的ESXi虚拟机教程已经强调过了，这里不设置局域网内会找不到创建的虚拟机网络。</p>
-<p><img src="https://pic2.zhimg.com/v2-cda3d29fa6867ce60152ef5e45130895_r.jpg"></p>
-<p>然后就开始正式创建虚拟机。选择“创建新虚拟机”，下一页。</p>
-<p><img src="https://pic4.zhimg.com/v2-46f5be635d2d4908157df07658ecb437_r.jpg"></p>
-<p>名称随意，我这里为了区分输入的“DSM7.2”，兼容性默认”ESXi 8.0 虚拟机“即可，客户机操作系统系列选择“Linux”，客户机操作系统版本选择“其他 6.x 或更高版本的 Linux（64位）”，下一页。</p>
-<p><img src="https://pic3.zhimg.com/v2-6b7250b3226e179f467aafd714bffb82_r.jpg"></p>
-<p>存储这里直接默认，下一页。</p>
-<p><img src="https://pic3.zhimg.com/v2-5065e966b808fb7d0ba7d3a035d413e2_r.jpg"></p>
-<p>然后在这里CPU和内存根据自己的需求随意设置吧，不管为了之后的群晖运行流畅，尽量选择高一点。接着将硬盘、SCSI控制器、USB控制器、CD&#x2F;DVD驱动器点击后面的叉叉直接删掉。</p>
-<p><img src="https://pic3.zhimg.com/v2-ce4dbaa32180f522d9a41b4a134b35ca_r.jpg"></p>
-<p>然后点开网络适配器，将适配器类型改成“E1000e”。这里顺便解释一下，多网口的小伙伴其实可以在这里设置网卡直通，因为我的零刻EQ12 Pro两个网口都被占用了，所以这里只能选择E1000e了。</p>
-<p><img src="https://pic4.zhimg.com/v2-701881930e34db64d57909bac0d00d03_r.jpg"></p>
-<p>然后还是在这步，再点击上面的“虚拟机选项”，将“引导选项”改成BIOS引导，完成之后下一页。</p>
-<p><img src="https://pic3.zhimg.com/v2-ad1b92a943d989be9846aac31529a86e_r.jpg"></p>
-<p>确认是我们的设置，没问题就点“完成”。</p>
-<p><img src="https://pic2.zhimg.com/v2-55d3c6a123a2e4055fded2a29772fa0d_r.jpg"></p>
-<p>接着点击ESXi 8.0 虚拟机左侧的“存储”选项，，选择“datastore1–数据存储浏览器–DSM7.2”，先上传 arpl.vmdk ，再上传arpl-flat.vmdk，也就是我们前面解压之后得到的两个ARPL引导文件。</p>
-<p><img src="https://pic3.zhimg.com/v2-953ce855d4cb2723a444865b44780caa_r.jpg"></p>
-<p>上传的时候请留意右上角的进度条，</p>
-<p><img src="https://pic3.zhimg.com/v2-0b8201d68e262541214873f3bd76ff16_r.jpg"></p>
-<p>进度条跑完了点击右下角的关闭即可，顺便说一句，上传的两个文件只显示 arpl.vmdk，arpl-flat.vmdk是看不到的，这个是正常情况。</p>
-<p><img src="https://pic4.zhimg.com/v2-a07fc844b097762992b1c0978b5e07bb_r.jpg"></p>
-<p>然后开始设置DSM7.2虚拟机。点击虚拟机名称，选择“编辑”，“添加硬盘”这里选择“现有硬盘”。</p>
-<p><img src="https://pic1.zhimg.com/v2-5328fb5196eb62196cea029a16e16e10_r.jpg"></p>
-<p>然后在打开的“数据存储浏览器”页面选择arpl.vmdk。</p>
-<p><img src="https://pic3.zhimg.com/v2-703a968799d1ceb37553b0c1a48b8312_r.jpg"></p>
-<p>然后在这块硬盘将控制器位置选择“SATA控制器”，标识改成“SATA(0:0)”，完成之后“保存”。</p>
-<p><img src="https://pic1.zhimg.com/v2-e7db518d15cff24af67bbdc229321698_r.jpg"></p>
-<p>然后再次点开“编辑”，“添加硬盘”选择“新标准硬盘”。</p>
-<p><img src="https://pic1.zhimg.com/v2-50826f6644faf2ce839a7f62715d693c_r.jpg"></p>
-<p>这块硬是当做群晖的存储盘使用的，所以容量根据自己的实际情况选择，只要不低于20GB，不超过大小上限即可。控制器位置还是选择“SATA控制器”，标识看看是不是“SATA(0:1)”，完成之后“保存”。</p>
-<p>到这里ESXi虚拟机部分也设置完成了。</p>
-<p><strong>ARPL的在线编译部分</strong></p>
-<p>这个时候我们可以直接在ESXi系统上启动DSM7.2虚拟机电源了。</p>
-<p><img src="https://pic4.zhimg.com/v2-174c98e6c89f728583ce2439aa8c196f_r.jpg"></p>
-<p>启动的界面如上图，默认即可，不用管它。</p>
-<p><img src="https://pic3.zhimg.com/v2-2d1b0b79bbbb5486d2f26e2c9d45198e_r.jpg"></p>
-<p>稍后就会来到这个界面，当看到上图界面出现一个IP地址就说明没有任何问题了，这个IP地址就是我们稍后的编译界面地址。如果这里没有出现IP或者其它问题，首先确认虚拟机网络那里安全设置全部接受没有，然后确定路由器开启了DHCP。</p>
-<p><img src="https://pic4.zhimg.com/v2-fffc719c5d5ba103c6f49ba81e69a503_r.jpg"></p>
-<p><img src="https://pic1.zhimg.com/v2-4498d50315fc7d0c50176cbeebe40e1c_r.jpg"></p>
-<p>另外打开一个浏览器，输入上一步得到的IP地址（包括后面的端口号）并回车就能打开编译界面了。（其实本来可以直接点击上步的IP链接自动跳转的，但我在谷歌浏览器可以，Edge浏览器却不行，可能是我自己这边的问题）。然后根据上图的提示更改语言为中文，这里面所有的操作都是通过键盘的方向键和回车键来控制的。</p>
-<p><img src="https://pic1.zhimg.com/v2-8d2368b4c27e9592c94c692aba44583c_r.jpg"></p>
-<p><img src="https://pic3.zhimg.com/v2-c34b77cce66202fe987845d2ba9dec72_r.jpg"></p>
-<p>第一步选择型号，根据自己的需求选择即可。配置好一点的选择DS918+，或者DS920+。配置一般的建议选择DS3615成功的概率会更高一些，我这里直接选择的DS920+。需要说明的是这里显示的型号并不是绝对的，这个是ARPL引导根据配置自动生成的。</p>
-<p>![](data:image&#x2F;svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='404' height='449'></svg>)</p>
-<p><img src="https://pic4.zhimg.com/v2-08e1b9ac23946829a5ae1d84de3bae63_r.jpg"></p>
-<p>版本选择直接选择最上面的最新版本。这里显示的最新版本是64561，其实这个就是目前群晖DSM7.2系统的最新版本。</p>
-<p><img src="https://pic1.zhimg.com/v2-2d74c03aca29089ee9c5cb928b195db4_r.jpg"></p>
-<p><img src="https://pic3.zhimg.com/v2-0c7c62e3c1c74b8564dbdac9baa4c66a_r.jpg"></p>
-<p>选择SN这里我们一般是选择“生成随机SN”。第二项的“输入SN”是针对洗白的小伙伴才可以用到，输入你得到的白群晖序列号即可。</p>
-<p><img src="https://pic1.zhimg.com/v2-752c9709f1c35651b98c42c519a7316c_r.jpg"></p>
-<p>这里顺便提一下，如果你使用的主机是十代CPU自带核显的，还需要在【插件】这里添加核显驱动。方法是点击“添加插件”，选择“i915 Intel iGPU Drivers(10th Gen)”并回车，在打开页面的params方框处不要输入任何内容直接回车即可。如果说你不是十代CPU这里直接略过。比如我今天使用的零刻EQ12 Pro其实是12代CPU，这里是不支持的，所以这里也选择略过，不进行任何设置。</p>
-<p><img src="https://pic1.zhimg.com/v2-2fd0c3e515b44f7e844e8bb266d26018_r.jpg"></p>
-<p>然后其它的就不用设置了，直接选择“编译引导”并回车。</p>
-<p><img src="https://pic4.zhimg.com/v2-adbae587a92efe9bac7f1007517878c3_r.jpg"></p>
-<p>这里它就开始下载对应的群晖系统pat文件，下载起来还是很快的，基本是满速下载。下载好之后它就会自动编译，编译也就那么几秒钟，我都没有来得及截图~~</p>
-<p>![](data:image&#x2F;svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='396' height='580'></svg>)</p>
-<p>编译完成之后会自动回到这个界面，默认选择的就是“启动”选项，直接回车。</p>
-<p><img src="https://pic4.zhimg.com/v2-4ef9cc24af1c3fd59b1872179d827aa7_r.jpg"></p>
-<p>然后就来到这个界面，请注意这个界面显示的信息：这里显示了群晖的型号和版本，等下我们需要在群晖的官网下载对应的固件。还有一行黄色字体提示网卡没有自定义MACs，也就是说我在前面设置虚拟机的时候没有直通，所以这个编译界面的IP地址其实就是我们稍后的群晖IP地址。</p>
-<p>正常情况下我们直接点击上图的那个IP链接就能跳转到群晖的设置界面（或者使用群晖助手局域网搜索也可以）但是目前冲突了怎么办呢？很简单，这个时候直接将这个DSM7.2的虚拟机重启一次就可以了，直接就能进入群晖的初始化界面了。</p>
-<p><strong>群晖DSM7.2安装部分</strong></p>
-<p><img src="https://pic2.zhimg.com/v2-be20eec7a8d5db295c3dbe85f737846d_r.jpg"></p>
-<p><img src="https://pic1.zhimg.com/v2-b6f7051cc540315e335f44f0b79a94a4_r.jpg"></p>
-<p>我们首先去群晖官网下载对应型号和版本的系统固件。打开群晖下载中心，首先展示的便是系统版本，我前面演示的版本是64561，对应的正好就是DSM7.2版本，点进去之后找到对应的型号DS920+，直接就能下载对应的pat系统固件了！</p>
-<p>群晖官网下载中心：<a href="https://link.zhihu.com/?target=https://archive.synology.cn/download/Os/DSM">https://archive.synology.cn/download/Os/DSM</a></p>
-<p><img src="https://pic4.zhimg.com/v2-36beb059c0ae7b1fc337272e201f64c3_r.jpg"></p>
-<p>浏览器输入前面得到的地址直接就能打开群晖DSM的设置界面了，首次使用需要初始化设置，点击“安装”</p>
-<p><img src="https://pic1.zhimg.com/v2-e81899276df263e18d573cd3f2f4b578_r.jpg"></p>
-<p>这里选择手动上传，然后选择我们在官网下载的对应的群晖系统pat固件，下一步。</p>
-<p><img src="https://pic4.zhimg.com/v2-a4c75f5f710c4d2452eeb1aa44e835e7_r.jpg"></p>
-<p>勾选“我了解这些硬盘上的所有数据都将被删除”，继续。</p>
-<p><img src="https://pic1.zhimg.com/v2-7f041f377f6656c517f83f4d7212f734_r.jpg"></p>
-<p>这里会再次弹出警告，按要求输入型号。我记得之前DSM7.1版本貌似没这个弹窗的~</p>
-<p><img src="https://pic4.zhimg.com/v2-8d659f4d370129b91253df1274cef1cf_r.jpg"></p>
-<p>安装正式开始，我们只需耐心等待即可！</p>
-<p><img src="https://pic1.zhimg.com/v2-4fae969e5aef693a63c102fbe7d07028_r.jpg"></p>
-<p>当看到这个重启倒计时界面的时候就说明群晖已经成功的安装，继续耐心等待，说是10分钟，其实也就两分钟左右的时间。</p>
-<p><img src="https://pic2.zhimg.com/v2-94b1c32f3c92f0cb4144a363d78d78f5_r.jpg"></p>
-<p><img src="https://pic3.zhimg.com/v2-3f92d342c63efc81d107c6c1970fd3f6_r.jpg"></p>
-<p>重启完成会自动进入群晖系统的初始化界面，正式进入DSM7.2的系统了，点击“开始”。</p>
-<p><img src="https://pic3.zhimg.com/v2-50dc471918943245f5dd59a6aff17aae_r.jpg"></p>
-<p>设备名字随意（但不能是中文），管理员账户随意（但不可以是admin），密码随意（但需要是大写字母&#x2F;小写字母&#x2F;数字的组合，长度不低于8位数），完成之后“下一步”。</p>
-<p><img src="https://pic1.zhimg.com/v2-054820f16c8f547fa160122542a37f58_r.jpg"></p>
-<p>选择“当有可用的DSM或者套件更新时通知我，我会手动安装”，下一步。</p>
-<p><img src="https://pic4.zhimg.com/v2-d37de00a85578a3aec8a05391de8b88b_r.jpg"></p>
-<p>选择“跳过”。</p>
-<p><img src="https://pic4.zhimg.com/v2-349324fea0cc55613028c6f12bacb1ef_r.jpg"></p>
-<p>任然跳过。</p>
-<p><img src="https://pic1.zhimg.com/v2-c2cbb98ce95d47f6e226e3fbf126b07c_r.jpg"></p>
-<p>取消勾选“我同意XXXX”，提交。</p>
-<p><img src="https://pic3.zhimg.com/v2-3c0a631528810cac316fec070fde9b5e_r.jpg"></p>
-<p><img src="https://pic2.zhimg.com/v2-23c90631a25101b0ab3f1d67e9e9a97d_r.jpg"></p>
-<p><img src="https://pic4.zhimg.com/v2-8d8c81e0039de7869d7abde688ba877f_r.jpg"></p>
-<p>以上几项都是群晖DSM7.2系统才有的提示，主要是安全性大大增强！</p>
-<p><img src="https://pic4.zhimg.com/v2-733e7f3e1f88ef32ab33a77900a0d693_r.jpg"></p>
-<p>之后便来到群晖系统后台桌面。这里会提示创建存储池和存储空间，点“立即创建”。</p>
-<p><img src="https://pic3.zhimg.com/v2-c29032cbaba81c528c949b7cde564c0e_r.jpg"></p>
-<p>开始。</p>
-<p><img src="https://pic1.zhimg.com/v2-d753f9b69a7a7702c583121ca1a158cc_r.jpg"></p>
-<p>因为我这里就一个硬盘，所以RAID类型这里需要选择“Basic”，下一步。</p>
-<p><img src="https://pic3.zhimg.com/v2-90f1231d8bfcfb72a9988ad5a912dc8a_r.jpg"></p>
-<p>然后就能看到我们在虚拟机创建的那个200GB的存储盘了，选中它，然后“下一步”。</p>
-<p><img src="https://pic3.zhimg.com/v2-c393ef86895691305e651233744487b6_r.jpg"></p>
-<p>“跳过硬盘检查”，下一步。</p>
-<p><img src="https://pic1.zhimg.com/v2-e4864edb45a54fd3486554b3c24df5d0_r.jpg"></p>
-<p>配置存储空间容量这里直接“最大化”，下一步。</p>
-<p><img src="https://pic4.zhimg.com/v2-62deed36064d8353237f315b17ec4e47_r.jpg"></p>
-<p>选择系统建议的“Btrfs”就可以，下一步。</p>
-<p><img src="https://pic2.zhimg.com/v2-4286daa2b29e5bfbad4985fd2e21e6a9_r.jpg"></p>
-<p>取消勾选“加密此存储空间”。</p>
-<p><img src="https://pic2.zhimg.com/v2-0689652a2dd1faa659095b4eaabded99_r.jpg"></p>
-<p>应用。</p>
-<p><img src="https://pic2.zhimg.com/v2-f45a7e3393784286dbf1c76bc56a2579_r.jpg"></p>
-<p>确定。</p>
-<p>铛铛~~全新的群晖DSM7.2系统便展现在我们的面前了！</p>
-<p><img src="https://pic4.zhimg.com/v2-22ac138ed21bf8db1dda1663d47eccfb_r.jpg"></p>
-<p>第一件事就是安装新增的Container Manager套件，之后有折腾心得我会继续分享~</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>以上就是今天折腾的内容，看似步骤繁多，其实操作起来并不难，因为我考虑到很多新手朋友，所以细节上比较啰嗦。反正按照上面的步骤，基本上可以一次成功！在此感谢互联网大佬的无私奉献，才让我等小白有了更多的折腾机会！</p>
+        <h1 id="Docker安装MySQL"><a href="#Docker安装MySQL" class="headerlink" title="Docker安装MySQL"></a>Docker安装MySQL</h1><p>Docker是一个开源的容器化平台，可以方便地搭建各种环境，包括MySQL数据库。在本教程中，我们将介绍如何使用Docker安装MySQL。</p>
+<h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><p>首先，您需要在您的计算机上安装Docker。您可以在<a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop">Docker官方网站</a>下载适用于您的操作系统的Docker Desktop应用程序并安装。</p>
+<h2 id="拉取MySQL镜像"><a href="#拉取MySQL镜像" class="headerlink" title="拉取MySQL镜像"></a>拉取MySQL镜像</h2><p>接下来，您需要从Docker Hub上拉取MySQL镜像。打开终端并执行以下命令：</p>
+<pre><code>docker pull mysql
+</code></pre>
+<p>这将从Docker Hub上下载MySQL镜像。您可以通过以下命令查看已下载的镜像：</p>
+<pre><code>docker images
+</code></pre>
+<h2 id="启动MySQL容器"><a href="#启动MySQL容器" class="headerlink" title="启动MySQL容器"></a>启动MySQL容器</h2><p>现在，您可以使用以下命令启动MySQL容器：</p>
+<pre><code>docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+</code></pre>
+<p>此命令将在后台运行MySQL容器，并将其命名为“some-mysql”。此外，您需要设置MySQL的root密码，以便在后续的步骤中进行访问。</p>
+<h2 id="连接MySQL容器"><a href="#连接MySQL容器" class="headerlink" title="连接MySQL容器"></a>连接MySQL容器</h2><p>要连接到MySQL容器，您可以使用以下命令：</p>
+<pre><code>docker exec -it some-mysql mysql -p
+</code></pre>
+<p>此命令将连接到MySQL容器，并要求您输入root密码。输入您在步骤3中设置的密码即可登录MySQL。</p>
+<h2 id="使用MySQL容器"><a href="#使用MySQL容器" class="headerlink" title="使用MySQL容器"></a>使用MySQL容器</h2><p>现在，您已经成功地使用Docker安装和启动了MySQL容器。您可以使用常规的MySQL命令进行数据库管理。例如，您可以使用以下命令创建一个新的数据库：</p>
+<pre><code>CREATE DATABASE mydatabase;
+</code></pre>
+<h1 id="DDL（数据定义语言）学习"><a href="#DDL（数据定义语言）学习" class="headerlink" title="DDL（数据定义语言）学习"></a>DDL（数据定义语言）学习</h1><p>当我们想要创建一个新的MySQL表时，我们需要使用DDL（数据定义语言）来定义表的结构。DDL包括创建表，修改表和删除表等操作。</p>
+<h2 id="创建库"><a href="#创建库" class="headerlink" title="创建库"></a>创建库</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>在MySQL中，可以使用<code>CREATE DATABASE</code>语句来创建一个新的数据库。它的基本语法如下：</p>
+<pre><code>CREATE DATABASE database_name;
+</code></pre>
+<p>其中，<code>database_name</code>是要创建的数据库的名称。</p>
+<p>例如，要创建一个名为<code>mydatabase</code>的新数据库，可以使用以下查询：</p>
+<pre><code>CREATE DATABASE mydatabase;
+</code></pre>
+<p>需要注意的是，创建数据库的用户必须具有足够的权限。如果当前用户没有创建数据库的权限，可以使用以下查询来授权：</p>
+<pre><code>GRANT CREATE ON *.* TO &#39;user&#39;@&#39;localhost&#39;;
+</code></pre>
+<p>这个查询将授予<code>user</code>用户在本地主机上创建数据库的权限。</p>
+<p>在创建数据库后，可以使用<code>USE</code>语句来选择要使用的数据库。例如，要使用<code>mydatabase</code>数据库，可以使用以下查询：</p>
+<pre><code>USE mydatabase;
+</code></pre>
+<p>这个查询将选择<code>mydatabase</code>数据库，并将其设置为当前数据库。在选择数据库后，可以使用其他SQL语句来创建表、插入数据、查询数据等。</p>
+<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><p>在MySQL中，数据库名必须遵循以下规则：</p>
+<ol>
+<li>数据库名必须以字母开头，可以包含字母、数字和下划线。</li>
+<li>数据库名不能超过64个字符。</li>
+<li>数据库名区分大小写。</li>
+<li>数据库名不能与MySQL保留关键字相同，例如<code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>等。</li>
+</ol>
+<p>需要注意的是，虽然MySQL允许使用特殊字符和空格作为数据库名，但这并不是一个好的做法，因为它可能会导致一些问题。为了避免这些问题，最好只使用字母、数字和下划线作为数据库名。</p>
+<p>另外，建议在命名数据库时使用有意义的名称，以便更好地描述数据库的内容和用途。例如，如果数据库用于存储客户信息，可以将其命名为<code>customers</code>。这样做可以使数据库更易于管理和维护。</p>
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p>在MySQL中，字符集用于定义数据库中存储的字符集和排序规则。MySQL支持多种字符集，包括ASCII、UTF-8、GBK等。在创建数据库时，可以指定要使用的字符集。如果没有指定字符集，则使用默认字符集。</p>
+<p>要查看MySQL中可用的字符集，可以使用以下查询：</p>
+<pre><code>SHOW CHARACTER SET;
+</code></pre>
+<p>要查看当前数据库的字符集，可以使用以下查询：</p>
+<pre><code>SELECT @@character_set_database;
+</code></pre>
+<p>要创建一个使用特定字符集的数据库，可以在<code>CREATE DATABASE</code>语句中指定字符集。例如，要创建一个使用UTF-8字符集的数据库，可以使用以下查询：</p>
+<pre><code>CREATE DATABASE mydatabase CHARACTER SET utf8;
+</code></pre>
+<h3 id="排序规则"><a href="#排序规则" class="headerlink" title="排序规则"></a>排序规则</h3><p>在MySQL中，排序规则用于定义字符串比较的方式。MySQL支持多种排序规则，包括二进制排序、不区分大小写排序、区分大小写排序等。在创建数据库时，可以指定要使用的排序规则。如果没有指定排序规则，则使用默认排序规则。</p>
+<p>要查看MySQL中可用的排序规则，可以使用以下查询：</p>
+<pre><code>SHOW COLLATION;
+</code></pre>
+<p>要查看当前数据库的排序规则，可以使用以下查询：</p>
+<pre><code>SELECT @@collation_database;
+</code></pre>
+<p>要创建一个使用特定排序规则的数据库，可以在<code>CREATE DATABASE</code>语句中指定排序规则。例如，要创建一个使用不区分大小写排序的数据库，可以使用以下查询：</p>
+<pre><code>CREATE DATABASE mydatabase COLLATE utf8_general_ci;
+</code></pre>
+<h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><h3 id="基本语法-1"><a href="#基本语法-1" class="headerlink" title="基本语法"></a>基本语法</h3><p>在MySQL中，用于创建表的关键字是<code>CREATE TABLE</code>。使用<code>CREATE TABLE</code>语句可以创建一个新的表，并指定表的名称、列名、数据类型、约束等信息。</p>
+<p>以下是一个简单的<code>CREATE TABLE</code>语句示例：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT,
+  name VARCHAR(50),
+  age INT
+);
+</code></pre>
+<p>这个语句将创建一个名为<code>mytable</code>的新表，包含三个列：<code>id</code>、<code>name</code>和<code>age</code>。其中，<code>id</code>和<code>age</code>列的数据类型为整数，<code>name</code>列的数据类型为可变长度的字符串。</p>
+<p>在<code>CREATE TABLE</code>语句中，还可以指定列的约束，如主键、唯一性约束、非空约束等。例如，要在<code>id</code>列上定义主键约束，可以使用以下语句：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT
+);
+</code></pre>
+<p>这个语句将在<code>id</code>列上定义主键约束，保证表中每行数据的唯一性。</p>
+<p>除了列的约束外，还可以在<code>CREATE TABLE</code>语句中指定表的字符集、排序规则等信息。例如，要创建一个使用UTF-8字符集和不区分大小写排序的表，可以使用以下语句：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT,
+  name VARCHAR(50),
+  age INT
+) CHARACTER SET utf8 COLLATE utf8_general_ci;
+</code></pre>
+<p>这个语句将创建一个使用UTF-8字符集和不区分大小写排序的新表。</p>
+<p>需要注意的是，在创建表时，应根据实际情况选择适当的数据类型、约束、字符集和排序规则，以确保表的正确性和性能。</p>
+<p>同时也可以使用<code>AUTO_INCREMENT</code>关键字来创建自增列。自增列是一种特殊的列，它的值会自动递增，每次插入新行时都会自动分配一个新的值。</p>
+<p>以下是一个使用<code>AUTO_INCREMENT</code>关键字创建自增列的示例：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50),
+  age INT
+);
+</code></pre>
+<p>这个语句将创建一个名为<code>mytable</code>的新表，包含三个列：<code>id</code>、<code>name</code>和<code>age</code>。其中，<code>id</code>列使用<code>AUTO_INCREMENT</code>关键字定义为自增列，并将其设置为主键。</p>
+<p>在插入新行时，可以省略<code>id</code>列的值，MySQL会自动分配一个新的值。例如，要插入一行数据，可以使用以下语句：</p>
+<pre><code>INSERT INTO mytable (name, age) VALUES (&#39;John&#39;, 30);
+</code></pre>
+<p>这个语句将插入一行数据，<code>id</code>列的值会自动递增。</p>
+<p>需要注意的是，自增列只能用于整数类型的列，且每个表只能有一个自增列。在创建表时，应根据实际情况选择是否需要使用自增列。如果表中的数据不需要自动递增的唯一标识符，可以不使用自增列。</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>在MySQL中，有多种数据类型可用于创建表中的列。以下是一些常用的MySQL数据类型：</p>
+<ol>
+<li><code>INT</code>或<code>INTEGER</code>：用于存储整数。</li>
+<li><code>FLOAT</code>或<code>DOUBLE</code>：用于存储浮点数。</li>
+<li><code>DECIMAL</code>：用于存储精确的小数。</li>
+<li><code>VARCHAR</code>：用于存储可变长度的字符串。</li>
+<li><code>CHAR</code>：用于存储固定长度的字符串。</li>
+<li><code>TEXT</code>：用于存储较长的文本数据。</li>
+<li><code>DATE</code>：用于存储日期。</li>
+<li><code>TIME</code>：用于存储时间。</li>
+<li><code>DATETIME</code>：用于存储日期和时间。</li>
+<li><code>TIMESTAMP</code>：用于存储时间戳。</li>
+<li><code>BOOLEAN</code>或<code>BOOL</code>：用于存储布尔值。</li>
+</ol>
+<p>除了这些常用的数据类型外，MySQL还支持其他一些数据类型，如枚举、集合、二进制数据等。在创建表时，可以根据需要选择适当的数据类型。需要注意的是，不同的数据类型具有不同的存储要求和限制，因此应根据实际情况选择合适的数据类型。</p>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>在MySQL中，索引是一种用于加速数据检索的数据结构。索引可以提高查询效率，减少查询所需的时间和资源。MySQL支持多种类型的索引，包括B-tree索引、哈希索引、全文索引等。</p>
+<p>以下是一些常用的MySQL索引:</p>
+<ol>
+<li><code>PRIMARY KEY</code>：用于定义表的主键，可以保证表中每行数据的唯一性。</li>
+<li><code>UNIQUE</code>：用于定义唯一性约束，可以保证列中的值唯一。</li>
+<li><code>INDEX</code>：用于创建普通索引，可以加速查询。</li>
+<li><code>FULLTEXT</code>：用于创建全文索引，可以加速全文检索。</li>
+</ol>
+<p>在创建表时，可以在列上定义索引。例如，要在<code>id</code>列上创建主键索引，可以使用以下查询：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT PRIMARY KEY,
+  name VARCHAR(50)
+);
+</code></pre>
+<p>要在<code>name</code>列上创建唯一性约束，可以使用以下查询：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT,
+  name VARCHAR(50) UNIQUE
+);
+</code></pre>
+<p>要在<code>name</code>列上创建普通索引，可以使用以下查询：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT,
+  name VARCHAR(50),
+  INDEX name_index (name)
+);
+</code></pre>
+<p>要在<code>content</code>列上创建全文索引，可以使用以下查询：</p>
+<pre><code>CREATE TABLE mytable (
+  id INT,
+  content TEXT,
+  FULLTEXT content_index (content)
+);
+</code></pre>
+<p>需要注意的是，索引可以提高查询效率，但也会增加数据插入、更新和删除的时间和资源消耗。因此，在创建索引时，应根据实际情况选择适当的索引类型和列。</p>
+<h2 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h2><p>如果我们想要修改现有的表结构，我们可以使用ALTER TABLE语句。以下是一些常见的ALTER TABLE操作：</p>
+<h3 id="添加列"><a href="#添加列" class="headerlink" title="添加列"></a>添加列</h3><p>要在表中添加新列，我们可以使用以下语法：</p>
+<pre><code>ALTER TABLE users ADD COLUMN birthdate DATE;
+</code></pre>
+<p>在上面的示例中，我们向“users”表中添加了一个名为“birthdate”的列。</p>
+<h3 id="修改列"><a href="#修改列" class="headerlink" title="修改列"></a>修改列</h3><p>要修改现有列的定义，我们可以使用以下语法：</p>
+<pre><code>ALTER TABLE users MODIFY COLUMN email VARCHAR(200);
+</code></pre>
+<p>在上面的示例中，我们将“users”表中的“email”列长度从100修改为200。</p>
+<h3 id="删除列"><a href="#删除列" class="headerlink" title="删除列"></a>删除列</h3><p>要删除表中的列，我们可以使用以下语法：</p>
+<pre><code>ALTER TABLE users DROP COLUMN email;
+</code></pre>
+<p>在上面的示例中，我们从“users”表中删除了名为“email”的列。</p>
+<h2 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h2><p>如果我们想要删除表，我们可以使用以下语句：</p>
+<pre><code>DROP TABLE users;
+</code></pre>
+<p>在上面的示例中，我们删除了名为“users”的表。<br>总之，DDL是MySQL中重要的语言，用于定义和修改表结构。它使我们能够创建，修改和删除表，以及添加，修改和删除表中的列。</p>
+<h1 id="DDL（数据操作语言）学习"><a href="#DDL（数据操作语言）学习" class="headerlink" title="DDL（数据操作语言）学习"></a>DDL（数据操作语言）学习</h1><p>当我们需要对MySQL数据库中的数据进行操作时，我们可以使用数据操作语言（DML）。DML包括SELECT、INSERT、UPDATE和DELETE语句。在本篇文章中，我们将学习如何使用MySQL中的DML语句。</p>
+<h2 id="SELECT语句"><a href="#SELECT语句" class="headerlink" title="SELECT语句"></a>SELECT语句</h2><p>SELECT语句用于从MySQL数据库中检索数据。它的基本语法如下：</p>
+<pre><code>SELECT column1, column2, ... FROM table_name WHERE condition;
+</code></pre>
+<p>其中，<code>column1, column2, ...</code>是要查询的列名，<code>table_name</code>是要查询的表名，<code>condition</code>是查询条件。</p>
+<p>例如，要查询customers表中的所有数据，可以使用以下查询：</p>
+<pre><code>SELECT * FROM customers;
+</code></pre>
+<p><code>WHERE</code>用于指定查询条件。它的基本语法如下：</p>
+<pre><code>SELECT column1, column2, ... FROM table_name WHERE condition;
+</code></pre>
+<p>其中，<code>condition</code>是查询条件。</p>
+<p>例如，要查询customers表中姓氏为Smith的客户，可以使用以下查询：</p>
+<pre><code>SELECT * FROM customers WHERE last_name = &#39;Smith&#39;;
+</code></pre>
+<p><code>ORDER BY</code>用于按照指定的列对查询结果进行排序。它的基本语法如下：</p>
+<pre><code>SELECT column1, column2, ... FROM table_name ORDER BY column1 [ASC|DESC];
+</code></pre>
+<p>其中，<code>column1</code>是要排序的列名，<code>ASC</code>表示升序排序，<code>DESC</code>表示降序排序。</p>
+<p>例如，要按照客户的姓氏对customers表进行升序排序，可以使用以下查询：</p>
+<pre><code>SELECT * FROM customers ORDER BY last_name ASC;
+</code></pre>
+<p><code>GROUP BY</code>用于将查询结果按照指定的列进行分组，并对每个分组进行聚合计算。它的基本语法如下：</p>
+<pre><code>SELECT column1, column2, ..., aggregate_function(column)
+FROM table_name
+WHERE condition
+GROUP BY column1, column2, ...;
+</code></pre>
+<p>其中，<code>column1, column2, ...</code>是要分组的列名，<code>aggregate_function(column)</code>是要对每个分组进行的聚合计算，例如<code>SUM(column)</code>、<code>AVG(column)</code>、<code>COUNT(column)</code>等。</p>
+<p>例如，要按照客户的国家对orders表进行分组，并计算每个国家的订单总数，可以使用以下查询：</p>
+<pre><code>SELECT country, COUNT(*) as total_orders
+FROM orders
+GROUP BY country;
+</code></pre>
+<p>这个查询将orders表按照国家进行分组，并对每个分组计算订单总数。查询结果将包含每个国家的名称和订单总数。</p>
+<p>需要注意的是，<code>GROUP BY</code>语句必须放在<code>WHERE</code>语句之后，而聚合函数必须放在<code>SELECT</code>语句中。在分组时，只能使用<code>SELECT</code>语句中指定的列和聚合函数，而不能使用其他列。</p>
+<h2 id="INSERT语句"><a href="#INSERT语句" class="headerlink" title="INSERT语句"></a>INSERT语句</h2><p><code>INSERT INTO</code>用于向数据库中插入新数据。它的基本语法如下：</p>
+<pre><code>INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);
+</code></pre>
+<p>其中，<code>table_name</code>是要插入数据的表名，<code>column1, column2, ...</code>是要插入数据的列名，<code>value1, value2, ...</code>是要插入的数据值。</p>
+<p>例如，要向customers表中插入一条新的客户数据，可以使用以下查询：</p>
+<pre><code>INSERT INTO customers (first_name, last_name, email) VALUES (&#39;John&#39;, &#39;Doe&#39;, &#39;john.doe@example.com&#39;);
+</code></pre>
+<h2 id="UPDATE语句"><a href="#UPDATE语句" class="headerlink" title="UPDATE语句"></a>UPDATE语句</h2><p><code>UPDATE</code>用于更新数据库中的数据。它的基本语法如下：</p>
+<pre><code>UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;
+</code></pre>
+<p>其中，<code>table_name</code>是要更新数据的表名，<code>column1 = value1, column2 = value2, ...</code>是要更新的列和值，<code>condition</code>是更新条件。</p>
+<p>例如，要将customers表中姓氏为Smith的客户的邮箱地址更新为<a href="mailto:new.email@example.com">new.email@example.com</a>，可以使用以下查询：</p>
+<pre><code>UPDATE customers SET email = &#39;new.email@example.com&#39; WHERE last_name = &#39;Smith&#39;;
+</code></pre>
+<h2 id="DELETE语句"><a href="#DELETE语句" class="headerlink" title="DELETE语句"></a>DELETE语句</h2><p><code>DELETE</code>用于从数据库中删除数据。它的基本语法如下：</p>
+<pre><code>DELETE FROM table_name WHERE condition;
+</code></pre>
+<p>其中，<code>table_name</code>是要删除数据的表名，<code>condition</code>是删除条件。</p>
+<p>例如，要从customers表中删除姓氏为Doe的客户，可以使用以下查询：</p>
+<pre><code>DELETE FROM customers WHERE last_name = &#39;Doe&#39;;
+</code></pre>
+<h1 id="联表查询"><a href="#联表查询" class="headerlink" title="联表查询"></a>联表查询</h1><p>在MySQL中，JOIN操作是将两个或多个表中的数据组合在一起的一种方法。JOIN操作可以帮助我们从多个表中检索数据，并将它们组合在一起以便更好地分析和理解数据。</p>
+<p>MySQL中有四种不同类型的JOIN操作：LEFT JOIN、RIGHT JOIN、INNER JOIN和FULL JOIN。下面我们将逐一介绍它们的用法和区别。</p>
+<h2 id="INNER-JOIN"><a href="#INNER-JOIN" class="headerlink" title="INNER JOIN"></a>INNER JOIN</h2><p>INNER JOIN操作返回两个表中都存在的行。如果一个表中没有与另一个表中的行匹配的行，则不会返回任何数据。</p>
+<p>下面是一个INNER JOIN操作的示例：</p>
+<pre><code>SELECT *
+FROM table1
+INNER JOIN table2
+ON table1.id = table2.id;
+</code></pre>
+<p>在这个例子中，我们将table1和table2两个表连接起来。我们使用ON关键字指定了连接条件，即table1.id &#x3D; table2.id。这意味着我们将根据这个条件将两个表中的数据进行匹配。</p>
+<h2 id="LEFT-JOIN"><a href="#LEFT-JOIN" class="headerlink" title="LEFT JOIN"></a>LEFT JOIN</h2><p>LEFT JOIN操作返回左表中的所有行，以及右表中与左表中的行匹配的行。如果右表中没有与左表中的行匹配的行，则返回NULL值。</p>
+<p>下面是一个LEFT JOIN操作的示例：</p>
+<pre><code>SELECT *
+FROM table1
+LEFT JOIN table2
+ON table1.id = table2.id;
+</code></pre>
+<p>在这个例子中，我们将table1和table2两个表连接起来。我们使用ON关键字指定了连接条件，即table1.id&#x3D; table2.id。这意味着我们将根据这个条件将两个表中的数据进行匹配。</p>
+<h2 id="RIGHT-JOIN"><a href="#RIGHT-JOIN" class="headerlink" title="RIGHT JOIN"></a>RIGHT JOIN</h2><p>RIGHT JOIN操作与LEFT JOIN操作类似，但是它返回右表中的所有行，以及左表中与右表中的行匹配的行。如果左表中没有与右表中的行匹配的行，则返回NULL值。</p>
+<p>下面是一个RIGHT JOIN操作的示例：</p>
+<pre><code>SELECT *
+FROM table1
+RIGHT JOIN table2
+ON table1.id = table2.id;
+</code></pre>
+<p>在这个例子中，我们将table1和table2两个表连接起来。我们使用ON关键字指定了连接条件，table1.id&#x3D; table2.id。这意味着我们将根据这个条件将两个表中的数据进行匹配。</p>
+<h2 id="FULL-JOIN"><a href="#FULL-JOIN" class="headerlink" title="FULL JOIN"></a>FULL JOIN</h2><p>FULL JOIN操作返回两个表中的所有行。如果一个表中没有与另一个表中的行匹配的行，则返回NULL值。</p>
+<p>下面是一个FULL JOIN操作的示例：</p>
+<pre><code>SELECT *
+FROM table1
+FULL JOIN table2
+ON table1.id = table2.id;
+</code></pre>
+<p>在这个例子中，我们将table1和table2两个表连接起来。我们使用ON关键字指定了连接条件，table1.id &#x3D; table2.id。这意味着我们将根据这个条件将两个表中的数据进行匹配</p>
+<h1 id="MySQL中的子查询"><a href="#MySQL中的子查询" class="headerlink" title="MySQL中的子查询"></a>MySQL中的子查询</h1><p>在MySQL中，子查询是一种查询语句，它嵌套在另一个查询语句中。子查询可以帮助我们从一个表中检索数据，并将其用作另一个查询的条件。</p>
+<p>MySQL中的子查询可以嵌套多层，每个子查询都可以返回一个结果集，这个结果集可以用作另一个查询的条件。</p>
+<p>下面我们将逐一介绍MySQL中子查询的用法和示例。</p>
+<h2 id="子查询的基本语法"><a href="#子查询的基本语法" class="headerlink" title="子查询的基本语法"></a>子查询的基本语法</h2><p>子查询的基本语法如下：</p>
+<pre><code>SELECT column1, column2, ...
+FROM table1
+WHERE column_name operator (SELECT column_name FROM table_name WHERE condition);
+</code></pre>
+<p>在这个语法中，我们使用了一个子查询，它嵌套在WHERE子句中。子查询返回一个结果集，这个结果集将用作WHERE子句中的条件。</p>
+<h2 id="子查询的示例"><a href="#子查询的示例" class="headerlink" title="子查询的示例"></a>子查询的示例</h2><p>下面是一个使用子查询的示例：</p>
+<pre><code>SELECT *
+FROM orders
+WHERE customer_id IN (SELECT customer_id FROM customers WHERE country = &#39;USA&#39;);
+</code></pre>
+<p>在这个示例中，我们使用了一个子查询，它嵌套在WHERE子句中。子查询返回一个结果集，这个结果集包含了所有来自美国的客户的ID。这个结果集将用作WHERE子句中的条件，以过滤orders表中来自美国的客户的订单。</p>
+<h2 id="子查询的类型"><a href="#子查询的类型" class="headerlink" title="子查询的类型"></a>子查询的类型</h2><p>MySQL中有两种类型的子查询：标量子查询和表子查询。</p>
+<h3 id="标量子查询"><a href="#标量子查询" class="headerlink" title="标量子查询"></a>标量子查询</h3><p>标量子查询返回一个单一的值，这个值可以用作另一个查询的条件。</p>
+<p>下面是一个标量子查询的示例：</p>
+<pre><code>SELECT *
+FROM orders
+WHERE order_date &gt; (SELECT MAX(order_date) FROM orders);
+</code></pre>
+<p>在这个示例中，我们使用了一个标量子查询，它返回了orders表中最近的订单日期。这个日期将用作WHERE子句中的条件，以过滤orders表中最近的订单。</p>
+<h3 id="表子查询"><a href="#表子查询" class="headerlink" title="表子查询"></a>表子查询</h3><p>表子查询返回一个结果集，这个结果集可以用作另一个查询的条件。</p>
+<p>下面是一个表子查询的示例：</p>
+<pre><code>SELECT *
+FROM orders
+WHERE customer_id IN (SELECT customer_id FROM customers WHERE country = &#39;USA&#39;);
+</code></pre>
+<p>在这个示例中，我们使用了一个表子查询，它返回了所有来自美国的客户的ID。这个结果集将用作WHERE子句中的条件，以过滤orders表中来自美国的客户的订单。</p>
+<h1 id="MySQL常用函数"><a href="#MySQL常用函数" class="headerlink" title="MySQL常用函数"></a>MySQL常用函数</h1><p>MySQL是一种常用的关系型数据库管理系统，它提供了许多内置函数来处理和操作数据，包括字符串函数、日期和时间函数、数学函数和聚合函数。</p>
+<h2 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h2><h3 id="CONCAT"><a href="#CONCAT" class="headerlink" title="CONCAT"></a>CONCAT</h3><p><code>CONCAT</code>函数用于将两个或多个字符串连接在一起。它的语法如下：</p>
+<pre><code>CONCAT(string1, string2, ...)
+</code></pre>
+<p>例如，要将名字和姓氏连接在一起，可以使用以下查询：</p>
+<pre><code>SELECT CONCAT(first_name, &#39; &#39;, last_name) AS full_name FROM customers;
+</code></pre>
+<h3 id="SUBSTRING"><a href="#SUBSTRING" class="headerlink" title="SUBSTRING"></a>SUBSTRING</h3><p><code>SUBSTRING</code>函数用于从字符串中提取子字符串。它的语法如下：</p>
+<pre><code>SUBSTRING(string, start, length)
+</code></pre>
+<p>其中，<code>string</code>是要提取子字符串的字符串，<code>start</code>是子字符串的起始位置，<code>length</code>是子字符串的长度。</p>
+<p>例如，要从字符串中提取前5个字符，可以使用以下查询：</p>
+<pre><code>SELECT SUBSTRING(&#39;Hello, world!&#39;, 1, 5);
+</code></pre>
+<h3 id="REPLACE"><a href="#REPLACE" class="headerlink" title="REPLACE"></a>REPLACE</h3><p><code>REPLACE</code>函数用于替换字符串中的子字符串。它的语法如下：</p>
+<pre><code>REPLACE(string, from_string, to_string)
+</code></pre>
+<p>其中，<code>string</code>是要替换子字符串的字符串，<code>from_string</code>是要替换的子字符串，<code>to_string</code>是要替换成的字符串。</p>
+<p>例如，要将字符串中的所有空格替换为下划线，可以使用以下查询：</p>
+<pre><code>SELECT REPLACE(&#39;Hello, world!&#39;, &#39; &#39;, &#39;_&#39;);
+</code></pre>
+<h2 id="日期和时间函数"><a href="#日期和时间函数" class="headerlink" title="日期和时间函数"></a>日期和时间函数</h2><h3 id="NOW"><a href="#NOW" class="headerlink" title="NOW"></a>NOW</h3><p><code>NOW</code>函数用于返回当前日期和时间。它的语法如下：</p>
+<pre><code>NOW()
+</code></pre>
+<p>例如，要获取当前日期和时间，可以使用以下查询：</p>
+<pre><code>SELECT NOW();
+</code></pre>
+<h3 id="DATE-FORMAT"><a href="#DATE-FORMAT" class="headerlink" title="DATE_FORMAT"></a>DATE_FORMAT</h3><p><code>DATE_FORMAT</code>函数用于将日期和时间格式化为指定的字符串。它的语法如下：</p>
+<pre><code>DATE_FORMAT(date, format)
+</code></pre>
+<p>其中，<code>date</code>是要格式化的日期和时间，<code>format</code>是要格式化成的字符串。</p>
+<p>例如，要将日期格式化为年-月-日的形式，可以使用以下查询：</p>
+<pre><code>SELECT DATE_FORMAT(NOW(), &#39;%Y-%m-%d&#39;);
+</code></pre>
+<h2 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h2><h3 id="ABS"><a href="#ABS" class="headerlink" title="ABS"></a>ABS</h3><p><code>ABS</code>函数用于返回一个数的绝对值。它的语法如下：</p>
+<pre><code>ABS(number)
+</code></pre>
+<p>例如，要获取-10的绝对值，可以使用以下查询：</p>
+<pre><code>SELECT ABS(-10);
+</code></pre>
+<h3 id="ROUND"><a href="#ROUND" class="headerlink" title="ROUND"></a>ROUND</h3><p><code>ROUND</code>函数用于将一个数四舍五入到指定的小数位数。它的语法如下：</p>
+<pre><code>ROUND(number, decimals)
+</code></pre>
+<p>其中，<code>number</code>是要四舍五入的数，<code>decimals</code>是要保留的小数位数。</p>
+<p>例如，要将3.14159四舍五入到两位小数，可以使用以下查询：</p>
+<pre><code>SELECT ROUND(3.14159, 2);
+</code></pre>
+<h2 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h2><h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT"></a>COUNT</h3><p><code>COUNT</code>函数用于计算指定列中的行数。它的语法如下：</p>
+<pre><code>COUNT(column)
+</code></pre>
+<p>例如，要计算customers表中的行数，可以使用以下查询：</p>
+<pre><code>SELECT COUNT(*) FROM customers;
+</code></pre>
+<h3 id="SUM"><a href="#SUM" class="headerlink" title="SUM"></a>SUM</h3><p><code>SUM</code>函数用于计算指定列中的数值总和。它的语法如下：</p>
+<pre><code>SUM(column)
+</code></pre>
+<p>例如，要计算orders表中的总销售额，可以使用以下查询：</p>
+<pre><code>SELECT SUM(total_amount) FROM orders;
+</code></pre>
+<h3 id="AVG"><a href="#AVG" class="headerlink" title="AVG"></a>AVG</h3><p><code>AVG</code>函数用于计算指定列中的平均值。它的语法如下：</p>
+<pre><code>AVG(column)
+</code></pre>
+<p>例如，要计算orders表中的平均销售额，可以使用以下查询：</p>
+<pre><code>SELECT AVG(total_amount) FROM orders;
+</code></pre>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本文整理了一些MySQL入门的知识来帮助大家快速入门和使用MySQL，如果大家有兴深入学习可以阅读MySQL的官方文档</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
