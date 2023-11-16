@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>linux无损调整分区大小 | Hexo</title>
-  <meta name="keywords" content=" Linux ">
-  <meta name="description" content="linux无损调整分区大小 | Hexo">
+  <title>centos基础学习 | Hexo</title>
+  <meta name="keywords" content=" CentOS ">
+  <meta name="description" content="centos基础学习 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，新校区都还没去看过。 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近除了打工就是准备自考 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com alist：zooxango.eu.org">
 <meta property="og:type" content="website">
@@ -630,9 +630,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-linux无损调整分区大小" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-centos7安装及基础命令" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">linux无损调整分区大小</h1>
+        <h1 class="article-title">centos基础学习</h1>
     
     <div class="article-meta">
         
@@ -650,19 +650,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color1">Linux</a>
+            <a class="color2">CentOS</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-12 18:14:10'>2023-11-11 13:25</time>
+            发布时间 : <time class="date" title='最后更新: 2023-11-16 17:03:51'>2023-11-17 03:18</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:617</span>
+        <span>字数:1.7k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -681,7 +681,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE"><span class="toc-text">前置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-text">实例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%9F%A5%E7%9C%8B%E5%90%84%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF"><span class="toc-text">1.查看各分区信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%87%8F%E5%B0%91-home%E5%88%86%E5%8C%BA%E7%A9%BA%E9%97%B4"><span class="toc-text">2.减少&#x2F;home分区空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%A2%9E%E5%8A%A0-root%E5%88%86%E5%8C%BA%E7%A9%BA%E9%97%B4"><span class="toc-text">3.增加&#x2F;root分区空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%89%A9%E5%B1%95XFS%E6%96%87%E4%BB%B6%E7%A9%BA%E9%97%B4%E5%A4%A7%E5%B0%8F"><span class="toc-text">4.扩展XFS文件空间大小</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AACentOS%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">创建一个CentOS虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac%E4%B8%8A%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">Mac上的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows%E4%B8%8A%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">Windows上的操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">安装虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E6%AC%A1%E5%90%AF%E5%8A%A8"><span class="toc-text">初次启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E8%AE%BE%E7%BD%AE"><span class="toc-text">语言设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F"><span class="toc-text">进入系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">Linux文件结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95"><span class="toc-text">常见的二级目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84-%E9%87%8D%E8%A6%81"><span class="toc-text">Linux文件路径(重要)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E8%A1%8C%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-text">Linux行提示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-text">切换用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E6%89%A7%E8%A1%8C"><span class="toc-text">命令的执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E5%B8%AE%E5%8A%A9"><span class="toc-text">命令的帮助</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4"><span class="toc-text">简单的系统命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-text">pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#date"><span class="toc-text">date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#passwd"><span class="toc-text">passwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6"><span class="toc-text">文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tab%E9%94%AE"><span class="toc-text">Tab键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#history"><span class="toc-text">history</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">Shell中的一些快捷键</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -697,100 +697,332 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前置"><a href="#前置" class="headerlink" title="前置"></a>前置</h2><ul>
-<li>系统环境: Red Hat 4.8.5-11</li>
-<li>情况：<ol>
-<li>home：500G</li>
-<li>root：50G</li>
-<li>root分区不够用</li>
-</ol>
-</li>
-<li>思路：把home分区的空间划一部分到root分区</li>
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>CentOS下载：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像站</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/">阿里巴巴镜像站</a></li>
 </ul>
-<pre><code># 设置home分区大小为200G，释放300G空间
-$ lvreduce -L 200G /dev/centos/home
-
-# 将空闲空间扩展到root分区
-$ lvextend -l +100%FREE /dev/centos/root
-
-# 使用XFS文件系统自带的命令集增加分区空间
-$ xfs_growfs /dev/mapper/centos-root
+</li>
+<li><p>VMware下载：<a target="_blank" rel="noopener" href="https://customerconnect.vmware.com/cn/downloads/#all_products">https://customerconnect.vmware.com/cn/downloads/#all_products</a></p>
+<ul>
+<li>Mac下载<strong>VMware Fusion</strong></li>
+<li>Windows下载 <strong>VMware Workstation Pro</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="创建一个CentOS虚拟机"><a href="#创建一个CentOS虚拟机" class="headerlink" title="创建一个CentOS虚拟机"></a>创建一个CentOS虚拟机</h2><h3 id="Mac上的操作"><a href="#Mac上的操作" class="headerlink" title="Mac上的操作"></a>Mac上的操作</h3><ul>
+<li>点击新建选择从光盘或映像中安装</li>
+<li>选择我们的<code>iso</code>文件</li>
+<li>一直点击继续直到结束</li>
+<li>根据自己需要选择磁盘大小和内存大小及CPU</li>
+<li>启动虚拟机</li>
+</ul>
+<h3 id="Windows上的操作"><a href="#Windows上的操作" class="headerlink" title="Windows上的操作"></a>Windows上的操作</h3><ul>
+<li><p>创建虚拟机</p>
+<ul>
+<li>点击文件 -&gt; 新建虚拟机</li>
+<li>选择典型，点击下一步</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/f65f58840e434f8fa5bd5a493a8f0329.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/f65f58840e434f8fa5bd5a493a8f0329.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/f65f58840e434f8fa5bd5a493a8f0329.png"></p>
+<ul>
+<li>选择镜像文件点击下一步</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/4fe69a3073a74b39bf4ceda34b8b2f30.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/4fe69a3073a74b39bf4ceda34b8b2f30.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/4fe69a3073a74b39bf4ceda34b8b2f30.png"></p>
+<ul>
+<li>选择安装位置点击下一步</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/d1beb68be801425aad01a5c446a8f79e.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/d1beb68be801425aad01a5c446a8f79e.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/d1beb68be801425aad01a5c446a8f79e.png"></p>
+<ul>
+<li>根据需要调整磁盘大小</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/c497762c1f454c8e8e9cc4d808794633.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/c497762c1f454c8e8e9cc4d808794633.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/c497762c1f454c8e8e9cc4d808794633.png"></p>
+<ul>
+<li>根据需要调整其它硬件</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/908e7def33ff4e478df0b9ef7898c254.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/908e7def33ff4e478df0b9ef7898c254.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/908e7def33ff4e478df0b9ef7898c254.png"></p>
+</li>
+</ul>
+<h2 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h2><ul>
+<li>选择安装CentOS</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/a9mltm5ad91669436712809.png"></p>
+<ul>
+<li>选择语言并点击继续，可以选择中文方式安装，但尽量保持英文安装避免某些错误</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/tfl37tm9wd1669436832522.png"></p>
+<ul>
+<li>选择安装盘</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/f8qxpnno2n1669436904214.png"></p>
+<ul>
+<li>选择目标磁盘并点击done</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/07sei4si491669436952180.png"></p>
+<ul>
+<li>选择安装项</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/kxbj25huid1669436994485.png"></p>
+<ul>
+<li>由于我们是亲手，所以可以装一个图形桌面来方便我们学习和操作，选择GNOME 桌面，然后点击Done</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/z2eqvcqqwb1669437099534.png"></p>
+<ul>
+<li>设置完成之后就可以点击继续安装了</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/mj1ay3kmul1669437153942.png"></p>
+<ul>
+<li>在安装过程中设置root密码及我们个人的账户，等待安装完成</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/ny62q29krh1669437248487.png"></p>
+<h2 id="初次启动"><a href="#初次启动" class="headerlink" title="初次启动"></a>初次启动</h2><ul>
+<li>点击协议</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/08e342efe2ea47c993718be242c837b8.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/08e342efe2ea47c993718be242c837b8.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/08e342efe2ea47c993718be242c837b8.png"></p>
+<ul>
+<li>点击同意然后点击Done</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/877808368be14cc2b165397c3db0bf5f.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/877808368be14cc2b165397c3db0bf5f.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/877808368be14cc2b165397c3db0bf5f.png"></p>
+<ul>
+<li>点击完成</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/79953ca3283749489a369b8418ed69ac.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/79953ca3283749489a369b8418ed69ac.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/79953ca3283749489a369b8418ed69ac.png"></p>
+<ul>
+<li>输入密码进入系统后会有弹窗，不用管，一直点击Next</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/d59e29e7cb3a4fa4a4626cd81e85ee34.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/d59e29e7cb3a4fa4a4626cd81e85ee34.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/d59e29e7cb3a4fa4a4626cd81e85ee34.png"></p>
+<h2 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h2><ul>
+<li>点击关机按钮-&gt;设置图标</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/71c8db9ac3924167bbb681ef0042e955.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/71c8db9ac3924167bbb681ef0042e955.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/71c8db9ac3924167bbb681ef0042e955.png"></p>
+<ul>
+<li>点击区域和语言</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/8072dc2ada0b46deba409f283b2b70a0.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/8072dc2ada0b46deba409f283b2b70a0.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/8072dc2ada0b46deba409f283b2b70a0.png"></p>
+<ul>
+<li>全部选择汉语</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/ca94089e65444e5dbdc6620eca7dd303.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/ca94089e65444e5dbdc6620eca7dd303.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/ca94089e65444e5dbdc6620eca7dd303.png"></p>
+<ul>
+<li>点击重启</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/2d70035953eb4d789c254d291f351064.png" alt="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/2d70035953eb4d789c254d291f351064.png" title="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/2d70035953eb4d789c254d291f351064.png"></p>
+<h2 id="进入系统"><a href="#进入系统" class="headerlink" title="进入系统"></a>进入系统</h2><ul>
+<li><p>普通用户</p>
+<ul>
+<li>选择对应的用户输入密码即可</li>
+</ul>
+</li>
+<li><p>root用户</p>
+<ul>
+<li>选择 not listed</li>
+<li>输入用户名和密码</li>
+</ul>
+</li>
+</ul>
+<h2 id="Linux文件结构"><a href="#Linux文件结构" class="headerlink" title="Linux文件结构"></a>Linux文件结构</h2><p>在Linux中，文件系统是一棵树，<code>/</code>为其根结点，形状大致如下：</p>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/b8ipofh4gn1669448309044.png"></p>
+<h3 id="常见的二级目录"><a href="#常见的二级目录" class="headerlink" title="常见的二级目录"></a>常见的二级目录</h3><ul>
+<li>&#x2F;bin：存放二进制可执行命令目录</li>
+<li><strong>&#x2F;home：用户主目录的基点目录，默认情况每个用户主目录都设在该目录下，如默认：用户user01的主目录是&#x2F;home&#x2F;user01，可用~user01表示</strong></li>
+<li>&#x2F;lib：存放标准程序设计库目录，又叫动态链接共享库目录，目录中文件类似windows里的后缀名为dll的文件</li>
+<li><strong>&#x2F;etc：存放系统管理和配置文件目录</strong></li>
+<li>&#x2F;dev：存放设备特殊文件目录，如声卡文件，磁盘文件等</li>
+<li><strong>&#x2F;usr：最庞大的目录，存放应用程序和文件目录</strong></li>
+<li>&#x2F;proc：虚拟目录，是系统内存的映射，可直接访问这个目录来获取系统信息</li>
+<li>&#x2F;root：系统管理员的主目录（特权阶级）</li>
+<li>&#x2F;var：存放系统产生的经常变化文件的目录，例如打印机、邮件等假脱机目录、日志文件、格式化后的手册页以及一些应用程序的数据文件等</li>
+<li>&#x2F;tmp：存放公用临时文件目录</li>
+<li>&#x2F;sbin 系统管理命令，这里存放的是系统管理员使用的管理程序</li>
+<li>&#x2F;mnt 系统提供这个目录是让用户临时挂载其他的文件系统</li>
+<li>&#x2F;lost+found 这个目录平时是空的，用于存放系统非正常关机而留下未保存的文件</li>
+</ul>
+<h3 id="Linux文件路径-重要"><a href="#Linux文件路径-重要" class="headerlink" title="Linux文件路径(重要)"></a>Linux文件路径(重要)</h3><ul>
+<li>绝对路径：从根(&#x2F;)一直到目标文件的路径</li>
+<li>相对路径：相对于当前文件的父目录的路径</li>
+</ul>
+<h2 id="Linux行提示符"><a href="#Linux行提示符" class="headerlink" title="Linux行提示符"></a>Linux行提示符</h2><ul>
+<li>我们右键打开终端，可以看到如下的行提示符</li>
+</ul>
+<pre><code>@localhost ~]$ 
 </code></pre>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>挂载在根目录的分区 <code>/dev/mapper/centos-root</code> 爆满，占用100%</p>
-<pre><code>$ df -h
-Filesystem               Size  Used Avail Use% Mounted on
-/dev/mapper/centos-root   50G   50G   19M 100% /
-devtmpfs                  32G     0   32G   0% /dev
-tmpfs                     32G     0   32G   0% /dev/shm
-tmpfs                     32G  2.5G   29G   8% /run
-tmpfs                     32G     0   32G   0% /sys/fs/cgroup
-/dev/mapper/centos-home  476G   33M  476G   1% /home
-/dev/sda1                497M  238M  259M  48% /boot
-tmpfs                    6.3G     0  6.3G   0% /run/user/0
-</code></pre>
-<p>挂载在根目录的分区空间太小，只有50G，而服务器 <code>home</code> 目录为非常用目录，挂在了近500G的空间。</p>
-<p>思路：从 <code>centos-home</code> 分区划出300G空间到 <code>centos-root</code> 分区。</p>
-<h4 id="1-查看各分区信息"><a href="#1-查看各分区信息" class="headerlink" title="1.查看各分区信息"></a>1.查看各分区信息</h4><pre><code>$ lvdisplay
---- Logical volume ---
-LV Path                /dev/centos/home
-LV Name                home
-VG Name                centos
-LV UUID                1fAt1E-bQsa-1HXR-MCE2-5VZ1-xzBz-iI1SLv
-LV Write Access        read/write
-LV Creation host, time localhost, 2016-10-26 17:23:47 +0800
-LV Status              available
-# open                 0
-LV Size                475.70 GiB
-Current LE             121778
-Segments               1
-Allocation             inherit
-Read ahead sectors     auto
-- currently set to     256
-Block device           253:2
-
---- Logical volume ---
-LV Path                /dev/centos/root
-LV Name                root
-VG Name                centos
-LV UUID                lD64zY-yc3Z-SZaB-dAjK-03YM-2gM8-pfj4oo
-LV Write Access        read/write
-LV Creation host, time localhost, 2016-10-26 17:23:48 +0800
-LV Status              available
-# open                 1
-LV Size                50.00 GiB
-Current LE             12800
-Segments               1
-Allocation             inherit
-Read ahead sectors     auto
-- currently set to     256
-Block device           253:0
-</code></pre>
-<h4 id="2-减少-home分区空间"><a href="#2-减少-home分区空间" class="headerlink" title="2.减少&#x2F;home分区空间"></a>2.减少&#x2F;home分区空间</h4><pre><code># 释放 /dev/centos/home 分区 300G 的空间
-# 命令设置 /dev/centos/home 分区 200G空间
-$ lvreduce -L 200G /dev/centos/home
-WARNING: Reducing active logical volume to 200.00 GiB.
- THIS MAY DESTROY YOUR DATA (filesystem etc.)
-Do you really want to reduce centos/home? [y/n]: y
- Size of logical volume centos/home changed from 475.70 GiB (121778 extents) to 200.00 GiB (51200 extents).
- Logical volume centos/home successfully resized.
-</code></pre>
-<h4 id="3-增加-root分区空间"><a href="#3-增加-root分区空间" class="headerlink" title="3.增加&#x2F;root分区空间"></a>3.增加&#x2F;root分区空间</h4><pre><code>$ lvextend -l +100%FREE /dev/centos/root
-Size of logical volume centos/root changed from 50.06 GiB (12816 extents) to 325.76 GiB (83394 extents).
-Logical volume centos/root successfully resized.
-</code></pre>
-<h4 id="4-扩展XFS文件空间大小"><a href="#4-扩展XFS文件空间大小" class="headerlink" title="4.扩展XFS文件空间大小"></a>4.扩展XFS文件空间大小</h4><pre><code>$ xfs_growfs /dev/mapper/centos-root
-meta-data=/dev/mapper/centos-root isize=256    agcount=4, agsize=3276800 blks
-         =                       sectsz=512   attr=2, projid32bit=1
-         =                       crc=0        finobt=0 spinodes=0
-data     =                       bsize=4096   blocks=13107200, imaxpct=25
-         =                       sunit=0      swidth=0 blks
-naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
-log      =internal               bsize=4096   blocks=6400, version=2
-         =                       sectsz=512   sunit=0 blks, lazy-count=1
-realtime =none                   extsz=4096   blocks=0, rtextents=0
-data blocks changed from 13107200 to 85395456
-</code></pre>
-<p>完成</p>
+<ul>
+<li><p>lengwen：表示当前打开shell的用户</p>
+</li>
+<li><p>@：分隔符</p>
+</li>
+<li><p>localhost：主机名</p>
+</li>
+<li><p>\<del>：当前路径(**在Linux中&#96;</del>&#96;可以快捷的代替当前用户的家目录**)</p>
+</li>
+<li><p>$：身份提示符</p>
+<ul>
+<li>\#表示超级用户</li>
+<li>$表示普通用户</li>
+</ul>
+</li>
+</ul>
+<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><p>命令<code>su username</code>来切换</p>
+<p><strong>注意：命令要在行提示符之后输入才能执行</strong></p>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="命令的执行"><a href="#命令的执行" class="headerlink" title="命令的执行"></a>命令的执行</h3><ul>
+<li><p>命令必须在行提示符之后输入</p>
+</li>
+<li><p>命令格式：命令 参数名 参数值</p>
+</li>
+<li><p>Ctrl + C：撤销命名的执行</p>
+</li>
+<li><p>命令参数</p>
+<ul>
+<li>-参数：单词缩写</li>
+<li>–参数：单词的全拼</li>
+</ul>
+</li>
+</ul>
+<h3 id="命令的帮助"><a href="#命令的帮助" class="headerlink" title="命令的帮助"></a>命令的帮助</h3><ul>
+<li><p>man 命令：查看命令的功能</p>
+<ul>
+<li>空格：下一页</li>
+<li>b：上一页</li>
+</ul>
+</li>
+<li><p>命令 –help：查看命令的帮助</p>
+</li>
+<li><p>[ ]：选择加入的内容，可加可不加</p>
+</li>
+<li><p>… ：加入的内容个数任意</p>
+</li>
+<li><p>&lt;&gt; ：内容在命令执行过程当中必须要加</p>
+</li>
+</ul>
+<h2 id="简单的系统命令"><a href="#简单的系统命令" class="headerlink" title="简单的系统命令"></a>简单的系统命令</h2><h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>跳转到目标目录</p>
+<p>用法<code>cd 目标目录</code></p>
+<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p>打印当前目录</p>
+<h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><ul>
+<li><p><code>date 11181115</code>：把系统时间设定为11月18日11：15 格式：月月天天小时分钟</p>
+</li>
+<li><p><code>date 111811152022.55</code>：2022表示年（可以不加）.55 表示秒（可以不加）</p>
+</li>
+<li><p><code>date -d +xday -xday</code>：查看x天前或者后的时间</p>
+</li>
+<li><p><code>date +%....</code>：设定date的输出格式</p>
+<ul>
+<li>%Y年（例如：2021,2022等）</li>
+<li>%m月（01…12）</li>
+<li>%d一个月的第几天（01…31）</li>
+<li>%H小时（00…23）</li>
+<li>%M分（00…59）</li>
+<li>%S秒（00…59）</li>
+</ul>
+</li>
+</ul>
+<h3 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h3><ul>
+<li>passwd 修改当前用户密码</li>
+</ul>
+<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/a8831yz11g1669450118155.png"></p>
+<ul>
+<li>参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数值</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-S</td>
+<td>用户名</td>
+<td>用户密码信息</td>
+</tr>
+<tr>
+<td>-status</td>
+<td>用户名</td>
+<td>用户密码状态</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>用户名</td>
+<td>锁定账号</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>用户名</td>
+<td>解锁</td>
+</tr>
+<tr>
+<td>-n 时间（单位：天）</td>
+<td>用户名</td>
+<td>设置密码最短有效期</td>
+</tr>
+<tr>
+<td>-x 时间（单位：天）</td>
+<td>用户名</td>
+<td>设置密码最长有效期</td>
+</tr>
+<tr>
+<td>-w 时间（单位：天）</td>
+<td>用户名</td>
+<td>设置警告期</td>
+</tr>
+<tr>
+<td>-i 时间（单位：天）</td>
+<td>用户名</td>
+<td>设定用户非活跃天数</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>用户名</td>
+<td>清除密码</td>
+</tr>
+</tbody></table>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><ul>
+<li><p>file：<code>file 文件名字</code>查看文件类型</p>
+</li>
+<li><p>文件内容查看</p>
+<ul>
+<li><code>cat filename</code>显示文件的全部内容</li>
+<li><code>less filename</code>分页浏览，按”q”退出</li>
+<li><code>head filename</code>显示一个文件的前几行</li>
+<li><code>head -n 5 filename</code>显示前五行</li>
+<li><code>tail filename</code>显示一个文件的后几行</li>
+<li><code>tail -n 5 filename</code>显示后五行</li>
+</ul>
+</li>
+<li><p>wc统计文件容量信息</p>
+<ul>
+<li><code>-l</code>行数</li>
+<li><code>-w</code>字数</li>
+<li><code>-c</code>字节数</li>
+<li><code>-m</code>字符数</li>
+</ul>
+</li>
+</ul>
+<h2 id="Tab键"><a href="#Tab键" class="headerlink" title="Tab键"></a>Tab键</h2><p>在系统中table键可以自动补齐存在的命令，文件名称和某些命令的参数</p>
+<h2 id="history"><a href="#history" class="headerlink" title="history"></a>history</h2><ul>
+<li><code>history</code>：历史调用</li>
+<li><code>hostory -c</code>：清除当前环境当中的历史命令</li>
+<li>！数字：执行第多少行命令</li>
+<li>！字母：执行最近一条以这个字母开头的命令</li>
+<li><strong>ctrl +R +关键字（重要）：执行最近一条含有这个关键字的命令</strong></li>
+<li>上下键：逐行调用命令</li>
+</ul>
+<h2 id="Shell中的一些快捷键"><a href="#Shell中的一些快捷键" class="headerlink" title="Shell中的一些快捷键"></a>Shell中的一些快捷键</h2><ul>
+<li><code>上下</code>历史的上一条命令，下一条命令</li>
+<li><code>左右</code>一个字符一个字符移动</li>
+<li><strong><code>Ctrl + a</code> 光标移动到行首</strong></li>
+<li><strong><code>Ctrl + e</code> 光标所在位置删除到行首</strong></li>
+<li><code>Ctrl + u</code> 光标所在位置删除到行首</li>
+<li><code>Ctrl + k</code> 光标所在位置删除到行尾</li>
+<li><strong><code>Ctrl + r + 关键字</code> 调出最近一条含有关键字的命令</strong></li>
+<li><strong><code>Ctrl + c</code> 撤销以输入的命令</strong></li>
+<li><code>Ctrl + d</code> 退出当前用户环境</li>
+<li><strong><code>Ctrl + L</code> 清空屏幕</strong></li>
+<li><code>Ctrl + Shift + c</code> 复制</li>
+<li><code>Ctrl + Shift + v</code> 粘贴</li>
+<li><code>Ctrl + shift + t</code> 在现有shell中重新打开一个table</li>
+<li><code>Ctrl + shift + n</code>在shell中打</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
