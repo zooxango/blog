@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Centos基础学习 | xango&#39;s|Hexo</title>
-  <meta name="keywords" content=" CentOS ">
-  <meta name="description" content="Centos基础学习 | xango&#39;s|Hexo">
+  <title>2024年1月25日 | xango&#39;s|Hexo</title>
+  <meta name="keywords" content=" 日常 ">
+  <meta name="description" content="2024年1月25日 | xango&#39;s|Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，新校区都还没去看过。 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近除了打工就是准备自考 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com alist：zooxango.eu.org">
 <meta property="og:type" content="website">
@@ -639,9 +639,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Centos7安装及基础命令" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-2024年1月25日" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Centos基础学习</h1>
+        <h1 class="article-title">2024年1月25日</h1>
     
     <div class="article-meta">
         
@@ -651,7 +651,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="运维">运维</a>
+            <a  data-rel="笔记">笔记</a> > 
+            
+            <a  data-rel="笔记&lt;---&gt;个人随笔">个人随笔</a>
             
         </span>
         
@@ -659,19 +661,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color2">CentOS</a>
+            <a class="color3">日常</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-16 20:13:34'>2023-11-16 17:18</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-25 21:34:08'>2024-01-25 21:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.7k</span>
+        <span>字数:22</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -690,7 +692,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AACentOS%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">创建一个CentOS虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac%E4%B8%8A%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">Mac上的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows%E4%B8%8A%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">Windows上的操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">安装虚拟机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E6%AC%A1%E5%90%AF%E5%8A%A8"><span class="toc-text">初次启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E8%AE%BE%E7%BD%AE"><span class="toc-text">语言设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F"><span class="toc-text">进入系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">Linux文件结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95"><span class="toc-text">常见的二级目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84-%E9%87%8D%E8%A6%81"><span class="toc-text">Linux文件路径(重要)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E8%A1%8C%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-text">Linux行提示符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7"><span class="toc-text">切换用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E6%89%A7%E8%A1%8C"><span class="toc-text">命令的执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E5%B8%AE%E5%8A%A9"><span class="toc-text">命令的帮助</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4"><span class="toc-text">简单的系统命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cd"><span class="toc-text">cd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-text">pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#date"><span class="toc-text">date</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#passwd"><span class="toc-text">passwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6"><span class="toc-text">文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tab%E9%94%AE"><span class="toc-text">Tab键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#history"><span class="toc-text">history</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">Shell中的一些快捷键</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -706,333 +708,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li><p>CentOS下载：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像站</a></li>
-<li><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/">阿里巴巴镜像站</a></li>
-</ul>
-</li>
-<li><p>VMware下载：<a target="_blank" rel="noopener" href="https://customerconnect.vmware.com/cn/downloads/#all_products">https://customerconnect.vmware.com/cn/downloads/#all_products</a></p>
-<ul>
-<li>Mac下载<strong>VMware Fusion</strong></li>
-<li>Windows下载 <strong>VMware Workstation Pro</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="创建一个CentOS虚拟机"><a href="#创建一个CentOS虚拟机" class="headerlink" title="创建一个CentOS虚拟机"></a>创建一个CentOS虚拟机</h2><h3 id="Mac上的操作"><a href="#Mac上的操作" class="headerlink" title="Mac上的操作"></a>Mac上的操作</h3><ul>
-<li>点击新建选择从光盘或映像中安装</li>
-<li>选择我们的<code>iso</code>文件</li>
-<li>一直点击继续直到结束</li>
-<li>根据自己需要选择磁盘大小和内存大小及CPU</li>
-<li>启动虚拟机</li>
-</ul>
-<h3 id="Windows上的操作"><a href="#Windows上的操作" class="headerlink" title="Windows上的操作"></a>Windows上的操作</h3><ul>
-<li><p>创建虚拟机</p>
-<ul>
-<li>点击文件 -&gt; 新建虚拟机</li>
-<li>选择典型，点击下一步</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/11/16/eLiErWxvg9Tqlwd.png"></p>
-<ul>
-<li>选择镜像文件点击下一步</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/11/16/hTbpDEqfilZcFUW.png"></p>
-<ul>
-<li>选择安装位置点击下一步</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/11/16/KkHuEwTlDmy8xVb.png"></p>
-<ul>
-<li>根据需要调整磁盘大小</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/c497762c1f454c8e8e9cc4d808794633.png"></p>
-<ul>
-<li>根据需要调整其它硬件</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/908e7def33ff4e478df0b9ef7898c254.png"></p>
-</li>
-</ul>
-<h2 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h2><ul>
-<li>选择安装CentOS</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/a9mltm5ad91669436712809.png"></p>
-<ul>
-<li>选择语言并点击继续，可以选择中文方式安装，但尽量保持英文安装避免某些错误</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/tfl37tm9wd1669436832522.png"></p>
-<ul>
-<li>选择安装盘</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/f8qxpnno2n1669436904214.png"></p>
-<ul>
-<li>选择目标磁盘并点击done</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/07sei4si491669436952180.png"></p>
-<ul>
-<li>选择安装项</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/kxbj25huid1669436994485.png"></p>
-<ul>
-<li>由于我们是亲手，所以可以装一个图形桌面来方便我们学习和操作，选择GNOME 桌面，然后点击Done</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/z2eqvcqqwb1669437099534.png"></p>
-<ul>
-<li>设置完成之后就可以点击继续安装了</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/mj1ay3kmul1669437153942.png"></p>
-<ul>
-<li>在安装过程中设置root密码及我们个人的账户，等待安装完成</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/ny62q29krh1669437248487.png"></p>
-<h2 id="初次启动"><a href="#初次启动" class="headerlink" title="初次启动"></a>初次启动</h2><ul>
-<li>点击协议</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/08e342efe2ea47c993718be242c837b8.png"></p>
-<ul>
-<li>点击同意然后点击Done</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/877808368be14cc2b165397c3db0bf5f.png"></p>
-<ul>
-<li>点击完成</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/79953ca3283749489a369b8418ed69ac.png"></p>
-<ul>
-<li>输入密码进入系统后会有弹窗，不用管，一直点击Next</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/d59e29e7cb3a4fa4a4626cd81e85ee34.png"></p>
-<h2 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h2><ul>
-<li>点击关机按钮-&gt;设置图标</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/71c8db9ac3924167bbb681ef0042e955.png"></p>
-<ul>
-<li>点击区域和语言</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/8072dc2ada0b46deba409f283b2b70a0.png"></p>
-<ul>
-<li>全部选择汉语</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/ca94089e65444e5dbdc6620eca7dd303.png"></p>
-<ul>
-<li>点击重启</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/2059/2d70035953eb4d789c254d291f351064.png"></p>
-<h2 id="进入系统"><a href="#进入系统" class="headerlink" title="进入系统"></a>进入系统</h2><ul>
-<li><p>普通用户</p>
-<ul>
-<li>选择对应的用户输入密码即可</li>
-</ul>
-</li>
-<li><p>root用户</p>
-<ul>
-<li>选择 not listed</li>
-<li>输入用户名和密码</li>
-</ul>
-</li>
-</ul>
-<h2 id="Linux文件结构"><a href="#Linux文件结构" class="headerlink" title="Linux文件结构"></a>Linux文件结构</h2><p>在Linux中，文件系统是一棵树，<code>/</code>为其根结点，形状大致如下：</p>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/b8ipofh4gn1669448309044.png"></p>
-<h3 id="常见的二级目录"><a href="#常见的二级目录" class="headerlink" title="常见的二级目录"></a>常见的二级目录</h3><ul>
-<li>&#x2F;bin：存放二进制可执行命令目录</li>
-<li><strong>&#x2F;home：用户主目录的基点目录，默认情况每个用户主目录都设在该目录下，如默认：用户user01的主目录是&#x2F;home&#x2F;user01，可用~user01表示</strong></li>
-<li>&#x2F;lib：存放标准程序设计库目录，又叫动态链接共享库目录，目录中文件类似windows里的后缀名为dll的文件</li>
-<li><strong>&#x2F;etc：存放系统管理和配置文件目录</strong></li>
-<li>&#x2F;dev：存放设备特殊文件目录，如声卡文件，磁盘文件等</li>
-<li><strong>&#x2F;usr：最庞大的目录，存放应用程序和文件目录</strong></li>
-<li>&#x2F;proc：虚拟目录，是系统内存的映射，可直接访问这个目录来获取系统信息</li>
-<li>&#x2F;root：系统管理员的主目录（特权阶级）</li>
-<li>&#x2F;var：存放系统产生的经常变化文件的目录，例如打印机、邮件等假脱机目录、日志文件、格式化后的手册页以及一些应用程序的数据文件等</li>
-<li>&#x2F;tmp：存放公用临时文件目录</li>
-<li>&#x2F;sbin 系统管理命令，这里存放的是系统管理员使用的管理程序</li>
-<li>&#x2F;mnt 系统提供这个目录是让用户临时挂载其他的文件系统</li>
-<li>&#x2F;lost+found 这个目录平时是空的，用于存放系统非正常关机而留下未保存的文件</li>
-</ul>
-<h3 id="Linux文件路径-重要"><a href="#Linux文件路径-重要" class="headerlink" title="Linux文件路径(重要)"></a>Linux文件路径(重要)</h3><ul>
-<li>绝对路径：从根(&#x2F;)一直到目标文件的路径</li>
-<li>相对路径：相对于当前文件的父目录的路径</li>
-</ul>
-<h2 id="Linux行提示符"><a href="#Linux行提示符" class="headerlink" title="Linux行提示符"></a>Linux行提示符</h2><ul>
-<li>我们右键打开终端，可以看到如下的行提示符</li>
-</ul>
-<pre><code>@localhost ~]$ 
-</code></pre>
-<ul>
-<li><p>lengwen：表示当前打开shell的用户</p>
-</li>
-<li><p>@：分隔符</p>
-</li>
-<li><p>localhost：主机名</p>
-</li>
-<li><p>\<del>：当前路径(**在Linux中&#96;</del>&#96;可以快捷的代替当前用户的家目录**)</p>
-</li>
-<li><p>$：身份提示符</p>
-<ul>
-<li>\#表示超级用户</li>
-<li>$表示普通用户</li>
-</ul>
-</li>
-</ul>
-<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><p>命令<code>su username</code>来切换</p>
-<p><strong>注意：命令要在行提示符之后输入才能执行</strong></p>
-<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="命令的执行"><a href="#命令的执行" class="headerlink" title="命令的执行"></a>命令的执行</h3><ul>
-<li><p>命令必须在行提示符之后输入</p>
-</li>
-<li><p>命令格式：命令 参数名 参数值</p>
-</li>
-<li><p>Ctrl + C：撤销命名的执行</p>
-</li>
-<li><p>命令参数</p>
-<ul>
-<li>-参数：单词缩写</li>
-<li>–参数：单词的全拼</li>
-</ul>
-</li>
-</ul>
-<h3 id="命令的帮助"><a href="#命令的帮助" class="headerlink" title="命令的帮助"></a>命令的帮助</h3><ul>
-<li><p>man 命令：查看命令的功能</p>
-<ul>
-<li>空格：下一页</li>
-<li>b：上一页</li>
-</ul>
-</li>
-<li><p>命令 –help：查看命令的帮助</p>
-</li>
-<li><p>[ ]：选择加入的内容，可加可不加</p>
-</li>
-<li><p>… ：加入的内容个数任意</p>
-</li>
-<li><p>&lt;&gt; ：内容在命令执行过程当中必须要加</p>
-</li>
-</ul>
-<h2 id="简单的系统命令"><a href="#简单的系统命令" class="headerlink" title="简单的系统命令"></a>简单的系统命令</h2><h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>跳转到目标目录</p>
-<p>用法<code>cd 目标目录</code></p>
-<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p>打印当前目录</p>
-<h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><ul>
-<li><p><code>date 11181115</code>：把系统时间设定为11月18日11：15 格式：月月天天小时分钟</p>
-</li>
-<li><p><code>date 111811152022.55</code>：2022表示年（可以不加）.55 表示秒（可以不加）</p>
-</li>
-<li><p><code>date -d +xday -xday</code>：查看x天前或者后的时间</p>
-</li>
-<li><p><code>date +%....</code>：设定date的输出格式</p>
-<ul>
-<li>%Y年（例如：2021,2022等）</li>
-<li>%m月（01…12）</li>
-<li>%d一个月的第几天（01…31）</li>
-<li>%H小时（00…23）</li>
-<li>%M分（00…59）</li>
-<li>%S秒（00…59）</li>
-</ul>
-</li>
-</ul>
-<h3 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h3><ul>
-<li>passwd 修改当前用户密码</li>
-</ul>
-<p><img src="https://imagebed-1252410096.cos.ap-nanjing.myqcloud.com/20221126/a8831yz11g1669450118155.png"></p>
-<ul>
-<li>参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>参数名</th>
-<th>参数值</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-S</td>
-<td>用户名</td>
-<td>用户密码信息</td>
-</tr>
-<tr>
-<td>-status</td>
-<td>用户名</td>
-<td>用户密码状态</td>
-</tr>
-<tr>
-<td>-l</td>
-<td>用户名</td>
-<td>锁定账号</td>
-</tr>
-<tr>
-<td>-u</td>
-<td>用户名</td>
-<td>解锁</td>
-</tr>
-<tr>
-<td>-n 时间（单位：天）</td>
-<td>用户名</td>
-<td>设置密码最短有效期</td>
-</tr>
-<tr>
-<td>-x 时间（单位：天）</td>
-<td>用户名</td>
-<td>设置密码最长有效期</td>
-</tr>
-<tr>
-<td>-w 时间（单位：天）</td>
-<td>用户名</td>
-<td>设置警告期</td>
-</tr>
-<tr>
-<td>-i 时间（单位：天）</td>
-<td>用户名</td>
-<td>设定用户非活跃天数</td>
-</tr>
-<tr>
-<td>-d</td>
-<td>用户名</td>
-<td>清除密码</td>
-</tr>
-</tbody></table>
-<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><ul>
-<li><p>file：<code>file 文件名字</code>查看文件类型</p>
-</li>
-<li><p>文件内容查看</p>
-<ul>
-<li><code>cat filename</code>显示文件的全部内容</li>
-<li><code>less filename</code>分页浏览，按”q”退出</li>
-<li><code>head filename</code>显示一个文件的前几行</li>
-<li><code>head -n 5 filename</code>显示前五行</li>
-<li><code>tail filename</code>显示一个文件的后几行</li>
-<li><code>tail -n 5 filename</code>显示后五行</li>
-</ul>
-</li>
-<li><p>wc统计文件容量信息</p>
-<ul>
-<li><code>-l</code>行数</li>
-<li><code>-w</code>字数</li>
-<li><code>-c</code>字节数</li>
-<li><code>-m</code>字符数</li>
-</ul>
-</li>
-</ul>
-<h2 id="Tab键"><a href="#Tab键" class="headerlink" title="Tab键"></a>Tab键</h2><p>在系统中table键可以自动补齐存在的命令，文件名称和某些命令的参数</p>
-<h2 id="history"><a href="#history" class="headerlink" title="history"></a>history</h2><ul>
-<li><code>history</code>：历史调用</li>
-<li><code>hostory -c</code>：清除当前环境当中的历史命令</li>
-<li>！数字：执行第多少行命令</li>
-<li>！字母：执行最近一条以这个字母开头的命令</li>
-<li><strong>ctrl +R +关键字（重要）：执行最近一条含有这个关键字的命令</strong></li>
-<li>上下键：逐行调用命令</li>
-</ul>
-<h2 id="Shell中的一些快捷键"><a href="#Shell中的一些快捷键" class="headerlink" title="Shell中的一些快捷键"></a>Shell中的一些快捷键</h2><ul>
-<li><code>上下</code>历史的上一条命令，下一条命令</li>
-<li><code>左右</code>一个字符一个字符移动</li>
-<li><strong><code>Ctrl + a</code> 光标移动到行首</strong></li>
-<li><strong><code>Ctrl + e</code> 光标所在位置删除到行首</strong></li>
-<li><code>Ctrl + u</code> 光标所在位置删除到行首</li>
-<li><code>Ctrl + k</code> 光标所在位置删除到行尾</li>
-<li><strong><code>Ctrl + r + 关键字</code> 调出最近一条含有关键字的命令</strong></li>
-<li><strong><code>Ctrl + c</code> 撤销以输入的命令</strong></li>
-<li><code>Ctrl + d</code> 退出当前用户环境</li>
-<li><strong><code>Ctrl + L</code> 清空屏幕</strong></li>
-<li><code>Ctrl + Shift + c</code> 复制</li>
-<li><code>Ctrl + Shift + v</code> 粘贴</li>
-<li><code>Ctrl + shift + t</code> 在现有shell中重新打开一个table</li>
-<li><code>Ctrl + shift + n</code>在shell中打</li>
-</ul>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d123bb885cb0621717aa5e49f1559944335e24bafd6ac770d9d5a343410068eb">a39d12963175bd8269dd4cb3da8b240d9dbecb72c172d899901eae919d91c00944667cb1b23fe17c2a895883abfec43eb3773bcdccae6f0d3df20da5ef95774226246b79d830bb58dbeba35d0286c128c6d242fb278941a14b911a558b7d6d6b63e9554f30ea1bcd48a51480d1b074071e29e0e7a4f4cee4a53442ac6b3a2df56884dfd3d73fdb653776c2c42fbf92c0aefdcb3064973d2364e33ee4c2ad906668f504e111d9a0c1bf77fbbde2d05ef1aa2b20fd30de481e67b4d72357559ce47d902189f07f1c143f22866322ff9d5b3d826c4da2f2508a7f6290166a4f64216c5d42801aa8b6e1a5ac67d61d3bd2b286ef8360ab5e636024a6f9b82679a42ed15919cbc16b926aa7c742e8103870e1a498ec32914a8da7095d1bb8028a0c1156bcff05e5699356496bd951f250c3ebcdaa37277e2d48f9c1e2e4f95cefea92654a7e8b8b61e9d4253f5acf07b4d80f4a82bade50fc5ce334dd5ccee21d485b9324e6974f4db2cae3bc55b1cc3d0893e9d07f01e8c3e0dcb17a4a6a7966a4880ae52a465ae11d1986b2812f1157fc50f653b640334c089abdb0dd2faa5e0690b160b0955a809993dcb9991a378a7d7cd23a8594ec65143e0f2422c1f515771884f4bcb37cb6b5cd88c92b2ec991d56cc3f5181187275244bb15c53f16f21a40c4f2719d4df12a16d5f2974b8a98fddd544d49ebd689236c923390f0854dffd80930778a97738b60e3589fff9c18c9fc6cccd7e4cf61dfe6dcf506b68388200f57a49f960680c6747b86723716911a404ff8d3d58f26e51ccd511faf9cbe2f33738ce22a40af2bd2980ccc84282c3a00edd57e345319c2abca135c0e8fe36e394afd6e679ffde80d576f521139a260f8cac123d37178910b861bf6c712e5d76d6d3ac8aad7034be4cb68f5f834573c955fec993a027eae760464f753eeeada8d2324c219382c03551cd3f14f0c9cb6f47d24feccedbfd6652d50563281ba035545b4647462e760cea3a1eb07fb2cf5398e5fd7db4aa2c3fd57ab862d710ae048ec4fa500cc8a1c9965c3a8db31dff8405f8561d4386d4327691772fc43f865184ae43bef057724bcc9807084be09ef7c87f3cd95903018b3ee5cc9993d71ea3c349835a978948cf593d9d422be6d8673de15a32f87a491dd78b683d31760ea07ebf52cb25a2c52692a2f5fa3cdaa2485a41a1985a835f95ebb103b1f5bea07092c86c5576c706d2f07ccbeb5cb1631c2661b81fea222a57e4f1c565bf8fbb13c21e5a0112bebed335325052e0f8807dad7896f04b75a01adaa9d2c5ef54adbac88b227b28120633b8371c176df57c16d997d38f328536796ea51227cc769565920eac869b2e47eeb4fa376dcf219057f77f2ff56d8ee82cc58b76bdd9b5c23da86351b42fbaca06c99ebb6f7e8ffa8f2e6cd0eadb9a2f52c8516c7e7ed4484881792a59f7d3f686489b6e9a002fc0bd8783391f812440c68e9359d311dd8b0eacdddb72151992e1929cd673d208273842125fc25332b052c931f98066ad2a7c6bd6036d74bdd962c078b8f9da32738234ec34239a7a88cd17355c61ed856651cccbe8b781fdeee6d4a3ce1b629ab172a9dbcd367d51151219be130f0c074998188213023399a272694af13dfc13a7043d77d37245364186f3f5f4d49a49ef9e963bc239d48db02327909b3b2178aa88a5262096cddc9bd01ac9d41482d23496bbf220ed239806ae69585697600d9989dd5e1e4a66e207e49742840bbd41ea44106e8e68eb394fcd5f3f3cf7d3d49a37a5de89aeccb09255154c5b247e78dd84137960dcc3be6f80b93bc26eb56528ae1a3edc7ee684e306a7dfe86abfb299e1d4ccc29bc211334b43af2bc2cb60e9adabc9b3502169e2dc4a8a33eadf07db7725211005dd3b49d95f1079de24b7ddb42f0ad73de28e69e2cd44c1dea0461a497b8b0ff9931eeb2f836c4e2e2c0424f4f804722cf1806277ed7d6c8c53d0d1fb67f2313825e21ded7cf4daea40e01994c7b6e47e188f5933634362c7c5616df8a6ccfc4f4ed40355699e60b91f6038c28b5a22fdb09c6ea802d02d5190e6cbb8b95a1753ac6bf1256ff6bf1d8bc826cea5abe0676528ddf08b27122834cdd0c5e35f9c909f34849eddfab5841cb9759462f048adddc5d84be12f0af32005be66d85f1e4e3bcb4376c1394927a98cd0616e941fde49d975df56979a9521fd94312c3dac0897251e10e79bf49b654c51270a95c378bb62914934a7c0f53ea49932bf4f90aa8d9daa9955a6dfd60076c5a3816c2675ec033b42f69d816a8cc1081c6a1590ae72184c2b9c9e979c162b718c4a83d29e5bcf3363d40a88df8103cd11faa997a15b5efca5c11388d148b543dbf1095c098b5adcf122bb1694a5d25a335</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章已被加密, 请联系管理员或输入密码查看.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
     </div>
