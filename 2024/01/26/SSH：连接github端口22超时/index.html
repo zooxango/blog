@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>xango&#39;s|Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="xango&#39;s|Hexo">
+  <title>SSH：连接github端口22超时 | xango&#39;s|Hexo</title>
+  <meta name="keywords" content=" GitHub , SSH ">
+  <meta name="description" content="SSH：连接github端口22超时 | xango&#39;s|Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，新校区都还没去看过。 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近除了打工就是准备自考 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com alist：zooxango.eu.org">
 <meta property="og:type" content="website">
@@ -57,7 +57,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -650,12 +650,62 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-SSH：连接github端口22超时" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E"><span class="toc-text">免责声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99"><span class="toc-text">关于本站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0"><span class="toc-text">博客平台</span></a></li></ol>
+        <h1 class="article-title">SSH：连接github端口22超时</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="运维">运维</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color2">GitHub</a>
+            
+            <a class="color4">SSH</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2024-01-26 15:44:02'>2024-01-26 15:37</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:631</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E9%98%85%E8%B5%84%E6%96%99%E5%90%8E%EF%BC%8C%E6%89%BE%E5%88%B0%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">查阅资料后，找到解决办法:</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -668,27 +718,110 @@
     }
 </style>
 </div>
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建本站初衷只为记录本人的折腾之路及日常琐事，分享自己觉得有趣好玩的应用，仅做个人日记本使用，来到此站的有缘人谨记，本站所有的引用和借鉴只要没有忘记都会标注出处，文章的时效性不作任何保证。</p>
-<h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本站所涉及的文章以及各类软件&#x2F;工具仅供研究测试和学习电脑 IT 技术之用，严禁传播和用于非法用途,对网站上所显示的信息或资料的准确性、完整性、合法性、可靠性、可操作性或可用性不承担任何责任。</p>
-<h2 id="关于本站"><a href="#关于本站" class="headerlink" title="关于本站"></a>关于本站</h2><p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
-<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a> ；使用 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 主题，主要功能：</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>ssh: connect to host github.com port 22: Connection timed out</p>
+</blockquote>
+<blockquote>
+<p>昨天在使用<strong>Git</strong>向GitHub上传代码时，出现错误：（此前已经使用SSH的方式连接过GitHub仓库并无问题）</p>
+</blockquote>
+<pre><code>ssh: connect to host github.com port 22: Connection timed out
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre>
+<blockquote>
+<p>首先输入以下命令检查<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=SSH&spm=1001.2101.3001.7020">SSH</a>是否能够连接成功（ssh后面有空格）</p>
+</blockquote>
+<pre><code>ssh -T git@github.com
+</code></pre>
 <ul>
-<li>极简体验，三段式设计</li>
-<li>评论</li>
-<li>多作者模式</li>
-<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
-<li>pad&#x2F;手机等移动端适配</li>
-<li>页面全局快捷键 <a target="_blank" rel="noopener" href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+<li>发现报错：</li>
 </ul>
+<pre><code>ssh: connect to host github.com port 22: Connection timed out
+</code></pre>
+<ul>
+<li>端口连接超时。</li>
+</ul>
+<h2 id="查阅资料后，找到解决办法"><a href="#查阅资料后，找到解决办法" class="headerlink" title="查阅资料后，找到解决办法:"></a>查阅资料后，找到解决办法:</h2><blockquote>
+<p>解决方案（亲测有效）<br>在C盘——用户——你的主机名文件夹中找到.ssh文件夹；（此前配置SSH时会生成该文件夹）<br>在.ssh文件夹中新建文件 config,不带后缀（可以新建文本文档，去掉.txt后缀）<br>使用notepad++（或其他方式）打开config文件，输入以下内容，保存后即可</p>
+<p><strong>注意：邮箱外层的括号需要保留</strong></p>
+</blockquote>
+<pre><code>Host github.com
+User YourEmail（你的邮箱）
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+</code></pre>
+<ul>
+<li>再次执行</li>
+</ul>
+<pre><code>ssh -T git@github.com
+</code></pre>
+<ul>
+<li>会出现以下提示，输入yes回车即可</li>
+</ul>
+<pre><code>The authenticity of host &#39;[ssh.github.com]:443 ([192.30.255.123]:443)&#39; can&#39;t be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added &#39;[ssh.github.com]:443,[192.30.255.123]:443&#39; (RSA) to the list of known hosts.
+</code></pre>
+<ul>
+<li>再次执行<code>ssh -T git@github.com</code>，发现验证通过</li>
+</ul>
+<pre><code>Hi Clare! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<ul>
+<li><p>完成以上步骤后，再次上传代码到<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=GitHub&spm=1001.2101.3001.7020">GitHub</a>就不会报错了</p>
+</li>
+<li><p>需要注意的是，<strong>假如你的电脑上拥有多个github账户</strong>，你可能事先修改过ssh的配置文件，你可能会将配置文件修改成这样子。</p>
+</li>
+</ul>
+<pre><code># For the account1
+Host github_account1
+HostName ssh.github.com
+PreferredAuthentications publickey
+Port 443
+User git
+IdentityFile ~/.ssh/id_rsa_account1
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+# For the account2
+Host github_account2
+HostName ssh.github.com
+PreferredAuthentications publickey
+Port 443
+User git
+IdentityFile ~/.ssh/id_rsa_account2
+</code></pre>
+<ul>
+<li>相比于普通只配置一个账户的用户，多账户用户在设置远程仓库连接时，往往设置成这个样子</li>
+</ul>
+<pre><code>[remote &quot;origin&quot;]
+    url = git@github_account1:account1/my_repo.git
+</code></pre>
+<p>你将通过配置文件中设置的<code>Host</code>别名<code>github_account1</code>代替<code>github.com</code>访问github，这意味着，如果你想要进行进行git clone操作，也应该通过别名访问，否则无法走443端口。假如你想clone <code>git@github.com:torvalds/linux.git</code>，你应该修改为<code>git@你设置的别名:torvalds/linux.git</code>。或者是，额外在配置文件里加上。</p>
+<pre><code># Just for clone
+Host github.com
+HostName ssh.github.com
+Port 443
+User git
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
     <div id="comments">
     <!-- 来必力City版安装代码 -->
     <div id="lv-container" data-id="city" data-uid="MTAyMC81OTA4NS8zNTU0Nw==">
@@ -714,6 +847,13 @@
 </div>
 
 
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -722,11 +862,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
