@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>GitHub官方强制https配置 | xango&#39;s|Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="GitHub官方强制https配置 | xango&#39;s|Hexo">
+  <title>2024年2月22日 | xango&#39;s|Hexo</title>
+  <meta name="keywords" content=" 日常 ">
+  <meta name="description" content="2024年2月22日 | xango&#39;s|Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介周向全，毕业于瓦窑坝皇家理工，可惜啊，老校区拆了，新校区都还没去看过。 目前从事网络和服务器运维相关工作，活了二十几年也没啥成就，折腾电子产品算是最大的爱好。。。。。。 最近除了打工就是准备自考 联系方式 QQ : 508387228 邮箱 : 508387228@qq.com alist：zooxango.eu.org">
 <meta property="og:type" content="website">
@@ -661,13 +661,11 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-GitHub官方强制https配置" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-2024年2月22日" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">GitHub官方强制https配置</h1>
+        <h1 class="article-title">2024年2月22日</h1>
     
     <div class="article-meta">
-        
-        <span class="top"><a>置顶</a></span>
         
         
         
@@ -677,20 +675,27 @@
             
             <a  data-rel="笔记">笔记</a> > 
             
-            <a  data-rel="笔记&lt;---&gt;折腾笔记">折腾笔记</a>
+            <a  data-rel="笔记&lt;---&gt;个人随笔">个人随笔</a>
             
         </span>
         
         
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">日常</a>
+            
+        </span>
+        
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-11-09 13:54:37'>2022-08-12 21:10</time>
+            发布时间 : <time class="date" title='最后更新: 2024-02-22 11:00:05'>2024-02-22 10:56</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:460</span>
+        <span>字数:437</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -709,7 +714,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E6%8E%A8%E8%8D%90%E3%80%8ABlack-River%E3%80%8B%E7%B2%A4%E8%AF%AD-%E8%83%A1%E8%8A%B3%E8%8A%B3"><span class="toc-text">音乐推荐《Black River》粤语 - 胡芳芳</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF"><span class="toc-text">版权信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E6%8E%A8%E8%8D%90"><span class="toc-text">音乐推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%8C%E6%9B%B2%E6%92%AD%E6%94%BE"><span class="toc-text">歌曲播放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%8C%E8%AF%8D"><span class="toc-text">歌词</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -725,16 +730,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>目前大多数基于 GitHub Pages 的 Hexo 博客都是利用 CloudFlare 的 CDN 中转来启用 HTTPS 的，实现方法可以参考我的文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/98057466">《利用Cloudflare为基于GitHub Pages的Hexo博客添加HTTPS支持》</a>，这样的做法确实可以起到开启HTTPS的目的，但是这样做也有弊端，你会发现 CDN 中转，国外访问的话，可以起到加速的作用，但是国内访问反而速度降低了，还不如直接连接GitHub呢</p>
-<p>其实 GitHub 官方是支持自定义域名开启 HTTPS 的，之前我和大多数人一样，以为只有 GitHub Pages 自带的域名（xxx.github.io）才能开启 HTTPS，直到有一天我发现了官方在2018年5月1日发表的博客：<a target="_blank" rel="noopener" href="https://github.blog/2018-05-01-github-pages-custom-domains-https/">《Custom domains on GitHub Pages gain support for HTTPS》</a>，大概讲的意思就是从8月份开始， GitHub Pages 上的自定义域名也能开启 HTTPS 了，下面就具体介绍一下如何实现</p>
-<p>如果你以前域名的记录类型是 CNAME 方式，那么就不需要做任何更改<br>如果你以前域名的记录类型是 A 方式，那么就需要把记录值指向以下IP地址：</p>
-<ul>
-<li>185.199.108.153</li>
-<li>185.199.109.153</li>
-<li>185.199.110.153</li>
-<li>185.199.111.153</li>
-</ul>
-<p>修改好记录值后，我们需要再次来到你博客的 GitHub 仓库，在仓库的【Settings】- 【GitHub Pages】下勾选【Enforce HTTPS】，注意，如果此时你不能勾选，请删除【Custom domain】里面你的域名并点击【Save】保存，刷新网页后就可以勾选了，然后在把域名填进去并保存即可，短时间可能会出现不安全的提示，这是因为加密证书大概一个小时左右才会生效，等一会儿就好了<br><img src="https://s2.loli.net/2023/10/16/ZhSYEg7nRTPu52y.png"><br>最后贴一个我的域名解析，可作为参考：<br><img src="https://s2.loli.net/2023/10/16/vpYu8F27w6GHnRk.png"></p>
+        <h1 id="音乐推荐《Black-River》粤语-胡芳芳"><a href="#音乐推荐《Black-River》粤语-胡芳芳" class="headerlink" title="音乐推荐《Black River》粤语 - 胡芳芳"></a>音乐推荐《Black River》粤语 - 胡芳芳</h1><h3 id="版权信息"><a href="#版权信息" class="headerlink" title="版权信息"></a>版权信息</h3><p>本歌曲试听播放来自网易云音乐</p>
+<h3 id="音乐推荐"><a href="#音乐推荐" class="headerlink" title="音乐推荐"></a>音乐推荐</h3><p>《人间失格》里有这样一句话：仅一夜之间，我的心判若两人。他自人山人海中来，原来只为给我一场空欢喜。你来时携风带雨，我无处可避；你走时乱了四季，我久病难医。</p>
+<h3 id="歌曲播放"><a href="#歌曲播放" class="headerlink" title="歌曲播放"></a>歌曲播放</h3><p><audio controls="" src="https://music.163.com/song/media/outer/url?id=477215944.mp3" autoplay="" loop="" style="width: 828px; min-width: 300px;"></audio></p>
+<p>《Black River》 <a target="_blank" rel="noopener" href="https://music.163.com/#/song?id=477215944">点击播放</a></p>
+<h3 id="歌词"><a href="#歌词" class="headerlink" title="歌词"></a>歌词</h3><p>作曲 : 黄志远<br>作词 : 胡芳芳<br>编曲：Dough boy<br>录音：张加<br>和声：胡芳芳<br>混音：张加<br>监制：胡芳芳&#x2F;张加<br>I falling in black river<br>原因不太多<br>只有你伤我<br>眉头继续缠住我<br>深锁我<br>种什么<br>结什么质素的果<br>情感想满足<br>都错<br>来牺牲我么<br>相信我都错<br>不管谁的星座<br>在惹祸<br>铁下心<br>决定走出这心魔<br>连玫瑰也孤独<br>连冰山都会哭<br>谁人仍害怕这结局<br>明明爱你不孰<br>明知道这插曲<br>从来连上帝都懒读<br>请赐我梵高<br>那样态度<br>谁都可以赌<br>不过<br>情不可以赌<br>输了太恐怖<br>谁人最后留下跳<br>樱花舞<br>爱情给<br>世人想得太清高<br>瞳孔都放空<br>起码<br>从这一秒钟<br>想放松一下<br>将感情给升华<br>又放下<br>我内心<br>已是魔鬼种的花<br>连玫瑰也孤独<br>连冰山都会哭<br>谁人仍害怕这结局<br>明明爱你不孰<br>明知道这插曲<br>从来连上帝都懒读<br>请赐我梵高<br>那样态度<br>连玫瑰也孤独<br>连冰山都会哭<br>谁人仍害怕这结局<br>明明爱你不孰<br>明知道这插曲<br>从来连上帝都懒读<br>请赐我梵高<br>那样态度</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。发送邮件至508387228@qq.com或移步&#34;关于&#34;获取更多联系方式！ </span>
